@@ -1,6 +1,6 @@
 <script>
-	import PieChart from '../../compenents/PieChart.svelte';
-	import BarChart from '../../compenents/BarChart.svelte';
+	import PieChart from '../../../compenents/PieChart.svelte';
+	import BarChart from '../../../compenents/BarChart.svelte';
 	import { onMount } from 'svelte';
 
 	onMount(async () => {

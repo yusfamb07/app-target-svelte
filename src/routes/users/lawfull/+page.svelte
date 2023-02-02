@@ -1,7 +1,6 @@
 <script>
-	import PieChartBinda from '../../compenents/PieChartBinda.svelte';
-	import LineChart from '../../compenents/LineChart.svelte';
-	import GeoChart from '../../compenents/GeoChart.svelte';
+	import PieChartBinda from '../../../compenents/PieChartBinda.svelte';
+	import LineChart from '../../../compenents/LineChart.svelte';
 	import { onMount } from 'svelte';
 	import MultiSelect from 'svelte-multiselect';
 
@@ -10,8 +9,12 @@
 	let selected = [];
 
 	onMount(async () => {
-		new DataTable('#geolist');
+		new DataTable('#lawfulllist');
 	});
+
+	// onMount(async () => {
+	// 	new select2('#notelepon');
+	// });
 </script>
 
 <div class="konten">
@@ -20,9 +23,9 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-body">
-						<div class="d-flex justify-content-between">
-							<h6>Request List (Geolocation )</h6>
-							<div class="d-flex align-items-center mb-3">
+						<div class="d-flex justify-content-between mb-3">
+							<h6>Request List (Lawful Interception )</h6>
+							<div class="d-flex align-items-center">
 								<button
 									type="button"
 									class="btn btn-secondary add-new"
@@ -35,7 +38,7 @@
 							</div>
 						</div>
 
-						<table id="geolist" class="table table-striped mb-5 mt-5" style="width:100%">
+						<table id="lawfulllist" class="table table-striped mb-5 mt-5" style="width:100%">
 							<thead>
 								<tr>
 									<th>No</th>
@@ -57,7 +60,7 @@
 									<td>Nama File</td>
 									<td>
 										<a
-											href="#"
+											href="#!"
 											data-bs-toggle="modal"
 											data-bs-target="#DetailModal"
 											style="color: #219386;">Disetujui</a
@@ -73,7 +76,7 @@
 									<td>Nama File</td>
 									<td>
 										<a
-											href="#"
+											href="#!"
 											data-bs-toggle="modal"
 											data-bs-target="#DetailModal"
 											style="color: #932121;">Tidak Disetujui</a
@@ -88,7 +91,7 @@
 									<td>Nama File</td>
 									<td>
 										<a
-											href="#"
+											href="#!"
 											data-bs-toggle="modal"
 											data-bs-target="#DetailModal"
 											style="color: #839321;">Pending</a
@@ -103,7 +106,7 @@
 									<td>Nama File</td>
 									<td>
 										<a
-											href="#"
+											href="#!"
 											data-bs-toggle="modal"
 											data-bs-target="#DetailModal"
 											style="color: #219386;">Disetujui</a
@@ -118,7 +121,7 @@
 									<td>Nama File</td>
 									<td>
 										<a
-											href="#"
+											href="#!"
 											data-bs-toggle="modal"
 											data-bs-target="#DetailModal"
 											style="color: #219386;">Disetujui</a
@@ -133,7 +136,7 @@
 									<td>Nama File</td>
 									<td>
 										<a
-											href="#"
+											href="#!"
 											data-bs-toggle="modal"
 											data-bs-target="#DetailModal"
 											style="color: #219386;">Disetujui</a
@@ -166,7 +169,7 @@
 					<div class="card-body">
 						<div class="d-flex justify-content-between">
 							<h6>Most Request by Binda</h6>
-							<h6>Geolocation Request <img src="/down.png" alt="" /></h6>
+							<h6>Lawful Interception Request <img src="/down.png" alt="" /></h6>
 						</div>
 						<div class="mt-5">
 							<PieChartBinda />
@@ -186,7 +189,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Geolocation Form Request</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Lawful Interception Form Request</h5>
 						<button
 							type="button"
 							class="btn-close btn-close-white"
@@ -242,7 +245,8 @@
 							<div class="col-md-12 mt-3">
 								<p>No Telepon Target</p>
 								<!-- <select
-									class="form-control select2 modal-form mb-3 "
+									class="form-control modal-form mb-3 "
+									id="notelepon"
 									multiple=""
 									data-placeholder="Select a State"
 									style="width: 100%;"
@@ -258,6 +262,7 @@
 									<option>Texas</option>
 									<option>Washington</option>
 								</select> -->
+								<!-- <code>selected = {JSON.stringify(selected)}</code> -->
 								<div class="mb-3">
 									<MultiSelect bind:selected options={ui_libs}>
 										<span style=" width: 20em; height: 20em;" />
@@ -325,7 +330,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Geolocation Target</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Lawful Interception Detail</h5>
 						<button
 							type="button"
 							class="btn-close btn-close-white "
@@ -357,7 +362,7 @@
 								<p id="msisdn">0826371829192</p>
 							</div>
 							<div class="col-md-4">
-								<p>Tanggal Registrasi</p>
+								<p>Device</p>
 							</div>
 							<div class="col-md-1">
 								<p>:</p>
@@ -365,46 +370,31 @@
 							<div class="col-md-6">
 								<p id="device">APPLE INC APPLE IPHONE 11 PRO MAX (A2220)</p>
 							</div>
+							<div class="col-md-12">
+								<h6 class="font-weight-bold">Tapping Recording</h6>
+							</div>
 							<div class="col-md-4">
-								<p>Device</p>
+								<p>Record Title</p>
 							</div>
 							<div class="col-md-1">
 								<p>:</p>
 							</div>
 							<div class="col-md-6">
-								<p id="device">14/Oktober/2022</p>
+								<p id="record-title">Rekaman dari Bondowoso</p>
 							</div>
-							<div class="col-md-12 mb-2">
-								<h6 class="font-weight-bold">Geolocation Information</h6>
-							</div>
-							<div class="col-md-12">
-								<div class="card mb-3" style="	background-color: #384149;">
-									<div class="row mt-3 mb-2">
-										<div class="col-md-4 ">
-											<p>Target Location</p>
-										</div>
-										<div class="col-md-1">
-											<p>:</p>
-										</div>
-										<div class="col-md-6">
-											<p id="target-location">
-												Keluarhan Pulo, Kebayoran Baru, Jakarta Selatan, DKI Jakarta
-											</p>
-										</div>
-										<div class="col-md-4">
-											<p>Target Time</p>
-										</div>
-										<div class="col-md-1">
-											<p>:</p>
-										</div>
-										<div class="col-md-6">
-											<p id="target-time">13:12 14/Oktober/2022</p>
-										</div>
-									</div>
-								</div>
+							<div class="col-md-12 mb-3">
+								<audio class="w-100 audio-player" controls autoplay>
+									<source src="#" type="audio/ogg" />
+								</audio>
 							</div>
 							<div class="col-md-12">
-								<GeoChart />
+								<textarea
+									class="form-control mb-3 modal-form"
+									id="rekaman"
+									placeholder="Tulis rekaman disini ........"
+									rows="3"
+									required
+								/>
 							</div>
 						</div>
 					</div>

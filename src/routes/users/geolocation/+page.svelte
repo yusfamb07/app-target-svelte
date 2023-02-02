@@ -1,6 +1,7 @@
 <script>
-	import PieChartBinda from '../../compenents/PieChartBinda.svelte';
-	import LineChart from '../../compenents/LineChart.svelte';
+	import PieChartBinda from '../../../compenents/PieChartBinda.svelte';
+	import LineChart from '../../../compenents/LineChart.svelte';
+	import GeoChart from '../../../compenents/GeoChart.svelte';
 	import { onMount } from 'svelte';
 	import MultiSelect from 'svelte-multiselect';
 
@@ -9,7 +10,7 @@
 	let selected = [];
 
 	onMount(async () => {
-		new DataTable('#telelist');
+		new DataTable('#geolist');
 	});
 </script>
 
@@ -20,7 +21,7 @@
 				<div class="card">
 					<div class="card-body">
 						<div class="d-flex justify-content-between">
-							<h6>Request List (Telecomunication )</h6>
+							<h6>Request List (Geolocation )</h6>
 							<div class="d-flex align-items-center mb-3">
 								<button
 									type="button"
@@ -34,7 +35,7 @@
 							</div>
 						</div>
 
-						<table id="telelist" class="table table-striped mb-5 mt-5" style="width:100%">
+						<table id="geolist" class="table table-striped mb-5 mt-5" style="width:100%">
 							<thead>
 								<tr>
 									<th>No</th>
@@ -165,7 +166,7 @@
 					<div class="card-body">
 						<div class="d-flex justify-content-between">
 							<h6>Most Request by Binda</h6>
-							<h6>Telecomunication Request <img src="/down.png" alt="" /></h6>
+							<h6>Geolocation Request <img src="/down.png" alt="" /></h6>
 						</div>
 						<div class="mt-5">
 							<PieChartBinda />
@@ -185,7 +186,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Telecomunication Form Request</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Geolocation Form Request</h5>
 						<button
 							type="button"
 							class="btn-close btn-close-white"
@@ -324,7 +325,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Telecomunication Target</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Geolocation Target</h5>
 						<button
 							type="button"
 							class="btn-close btn-close-white "
@@ -356,7 +357,7 @@
 								<p id="msisdn">0826371829192</p>
 							</div>
 							<div class="col-md-4">
-								<p>Device</p>
+								<p>Tanggal Registrasi</p>
 							</div>
 							<div class="col-md-1">
 								<p>:</p>
@@ -364,31 +365,46 @@
 							<div class="col-md-6">
 								<p id="device">APPLE INC APPLE IPHONE 11 PRO MAX (A2220)</p>
 							</div>
-							<div class="col-md-12">
-								<h6 class="font-weight-bold">Tapping Recording</h6>
-							</div>
 							<div class="col-md-4">
-								<p>Record Title</p>
+								<p>Device</p>
 							</div>
 							<div class="col-md-1">
 								<p>:</p>
 							</div>
 							<div class="col-md-6">
-								<p id="record-title">Rekaman dari Bondowoso</p>
+								<p id="device">14/Oktober/2022</p>
 							</div>
-							<div class="col-md-12 mb-3">
-								<audio class="w-100 audio-player" controls autoplay>
-									<source src="#" type="audio/ogg" />
-								</audio>
+							<div class="col-md-12 mb-2">
+								<h6 class="font-weight-bold">Geolocation Information</h6>
 							</div>
 							<div class="col-md-12">
-								<textarea
-									class="form-control mb-3 modal-form"
-									id="rekaman"
-									placeholder="Tulis rekaman disini ........"
-									rows="3"
-									required
-								/>
+								<div class="card mb-3" style="	background-color: #384149;">
+									<div class="row mt-3 mb-2">
+										<div class="col-md-4 ">
+											<p>Target Location</p>
+										</div>
+										<div class="col-md-1">
+											<p>:</p>
+										</div>
+										<div class="col-md-6">
+											<p id="target-location">
+												Keluarhan Pulo, Kebayoran Baru, Jakarta Selatan, DKI Jakarta
+											</p>
+										</div>
+										<div class="col-md-4">
+											<p>Target Time</p>
+										</div>
+										<div class="col-md-1">
+											<p>:</p>
+										</div>
+										<div class="col-md-6">
+											<p id="target-time">13:12 14/Oktober/2022</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<GeoChart />
 							</div>
 						</div>
 					</div>

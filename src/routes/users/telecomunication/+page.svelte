@@ -1,6 +1,6 @@
 <script>
-	import PieChartBinda from '../../compenents/PieChartBinda.svelte';
-	import LineChart from '../../compenents/LineChart.svelte';
+	import PieChartBinda from '../../../compenents/PieChartBinda.svelte';
+	import LineChart from '../../../compenents/LineChart.svelte';
 	import { onMount } from 'svelte';
 	import MultiSelect from 'svelte-multiselect';
 
@@ -9,12 +9,8 @@
 	let selected = [];
 
 	onMount(async () => {
-		new DataTable('#lawfulllist');
+		new DataTable('#telelist');
 	});
-
-	// onMount(async () => {
-	// 	new select2('#notelepon');
-	// });
 </script>
 
 <div class="konten">
@@ -23,9 +19,9 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-body">
-						<div class="d-flex justify-content-between mb-3">
-							<h6>Request List (Lawful Interception )</h6>
-							<div class="d-flex align-items-center">
+						<div class="d-flex justify-content-between">
+							<h6>Request List (Telecomunication )</h6>
+							<div class="d-flex align-items-center mb-3">
 								<button
 									type="button"
 									class="btn btn-secondary add-new"
@@ -38,7 +34,7 @@
 							</div>
 						</div>
 
-						<table id="lawfulllist" class="table table-striped mb-5 mt-5" style="width:100%">
+						<table id="telelist" class="table table-striped mb-5 mt-5" style="width:100%">
 							<thead>
 								<tr>
 									<th>No</th>
@@ -60,7 +56,7 @@
 									<td>Nama File</td>
 									<td>
 										<a
-											href="#!"
+											href="#"
 											data-bs-toggle="modal"
 											data-bs-target="#DetailModal"
 											style="color: #219386;">Disetujui</a
@@ -76,7 +72,7 @@
 									<td>Nama File</td>
 									<td>
 										<a
-											href="#!"
+											href="#"
 											data-bs-toggle="modal"
 											data-bs-target="#DetailModal"
 											style="color: #932121;">Tidak Disetujui</a
@@ -91,7 +87,7 @@
 									<td>Nama File</td>
 									<td>
 										<a
-											href="#!"
+											href="#"
 											data-bs-toggle="modal"
 											data-bs-target="#DetailModal"
 											style="color: #839321;">Pending</a
@@ -106,7 +102,7 @@
 									<td>Nama File</td>
 									<td>
 										<a
-											href="#!"
+											href="#"
 											data-bs-toggle="modal"
 											data-bs-target="#DetailModal"
 											style="color: #219386;">Disetujui</a
@@ -121,7 +117,7 @@
 									<td>Nama File</td>
 									<td>
 										<a
-											href="#!"
+											href="#"
 											data-bs-toggle="modal"
 											data-bs-target="#DetailModal"
 											style="color: #219386;">Disetujui</a
@@ -136,7 +132,7 @@
 									<td>Nama File</td>
 									<td>
 										<a
-											href="#!"
+											href="#"
 											data-bs-toggle="modal"
 											data-bs-target="#DetailModal"
 											style="color: #219386;">Disetujui</a
@@ -169,7 +165,7 @@
 					<div class="card-body">
 						<div class="d-flex justify-content-between">
 							<h6>Most Request by Binda</h6>
-							<h6>Lawful Interception Request <img src="/down.png" alt="" /></h6>
+							<h6>Telecomunication Request <img src="/down.png" alt="" /></h6>
 						</div>
 						<div class="mt-5">
 							<PieChartBinda />
@@ -189,7 +185,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Lawful Interception Form Request</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Telecomunication Form Request</h5>
 						<button
 							type="button"
 							class="btn-close btn-close-white"
@@ -245,8 +241,7 @@
 							<div class="col-md-12 mt-3">
 								<p>No Telepon Target</p>
 								<!-- <select
-									class="form-control modal-form mb-3 "
-									id="notelepon"
+									class="form-control select2 modal-form mb-3 "
 									multiple=""
 									data-placeholder="Select a State"
 									style="width: 100%;"
@@ -262,7 +257,6 @@
 									<option>Texas</option>
 									<option>Washington</option>
 								</select> -->
-								<!-- <code>selected = {JSON.stringify(selected)}</code> -->
 								<div class="mb-3">
 									<MultiSelect bind:selected options={ui_libs}>
 										<span style=" width: 20em; height: 20em;" />
@@ -330,7 +324,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Lawful Interception Detail</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Telecomunication Target</h5>
 						<button
 							type="button"
 							class="btn-close btn-close-white "
