@@ -495,6 +495,7 @@
 										id="basic-url"
 										aria-describedby="basic-addon3"
 										placeholder="SRT/12"
+										disabled
 									/>
 								</div>
 							</div>
