@@ -1,4 +1,5 @@
 <script>
+	import GeoChart from '../../../compenents/GeoChart.svelte';
 	import PieChartBinda from '../../../compenents/PieChartBinda.svelte';
 	import LineChart from '../../../compenents/LineChart.svelte';
 	import { onMount } from 'svelte';
@@ -10,6 +11,8 @@
 
 	onMount(async () => {
 		new DataTable('#lawfulllist');
+		new DataTable('#geolist');
+		new DataTable('#msisdnList');
 	});
 
 	// onMount(async () => {
@@ -484,13 +487,14 @@
 						<div class="cols-md-12 d-flex column-gap-3" id="outer-container">
 							<div class="cols-md-6 container-input">
 								<div class="mb-3 ">
-									<label for="basic-url" class="form-label " id="input-label">Nomor Surat</label>
+									<label for="basic-url" class="form-label  " id="input-label">Nomor Surat</label>
 
 									<input
 										type="text"
-										class="form-control"
+										class="form-control input-letter"
 										id="basic-url"
 										aria-describedby="basic-addon3"
+										placeholder="SRT/12"
 									/>
 								</div>
 							</div>
@@ -500,9 +504,11 @@
 
 									<input
 										type="text"
-										class="form-control"
+										class="form-control input-letter"
 										id="basic-url"
 										aria-describedby="basic-addon3"
+										placeholder="SRT/12"
+										disabled
 									/>
 								</div>
 							</div>
@@ -635,7 +641,7 @@
 			aria-hidden="true"
 		>
 			<div class="modal-dialog">
-				<div class="modal-content">
+				<div class="modal-content modal-number">
 					<div class="modal-header">
 						<h5 class="modal-title" id="exampleModalLabel">
 							Binda Jakarta <span>(628129129129)</span>
@@ -652,158 +658,101 @@
 							<div class="col-md-12">
 								<h6 class="font-weight-bold">Informasi Peta</h6>
 							</div>
-						</div>
-						<div class="cols-md-12 d-flex column-gap-3" id="outer-container">
-							<div class="cols-md-6 container-input">
-								<div class="mb-3 ">
-									<label for="basic-url" class="form-label " id="input-label">Nomor Surat</label>
-
-									<input
-										type="text"
-										class="form-control"
-										id="basic-url"
-										aria-describedby="basic-addon3"
-									/>
+							<div class="col-md-12 geo-container">
+								<GeoChart />
+							</div>
+							<div class="col-md-12 d-flex column-gap-3 last-location-container">
+								<div class="last-location">
+									<p>Lokasi Terakhir</p>
+									<div class="msisdn-container">
+										<p>MSISDN : <span>628129129129</span></p>
+										<p>
+											Jl. Kirai, Cipete Utara, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah Khusus
+											Ibukota Jakarta
+										</p>
+									</div>
+									<div class="update-container">
+										<p style="color:#fbfdff">Update MSISDN</p>
+										<table id="msisdnList" class="table table-striped mb-3 mt-3" style="width:100%">
+											<thead>
+												<tr>
+													<th>No</th>
+													<th>Update</th>
+													<th>Waktu</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td>MSISDN Update by Binda Bandung</td>
+													<td>13.00, 12/12/2022</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td>MSISDN Update by Binda Jakarta</td>
+													<td>13.00, 12/12/2022</td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td>MSISDN Update by Binda Yogyakarta</td>
+													<td>13.00, 12/12/2022</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="get-contact">
+									<p>Get Contact</p>
+									<div class="card-get-contact d-flex flex-column">
+										<div class="inner-contact">
+											<p>Name <span> : Michael Jackson</span></p>
+											<p>Phone Number<span>: 628129129129</span></p>
+										</div>
+										<div class="outer-tag-container">
+											<div class="tag-container"># <span>Michael Jackson</span></div>
+											<div class="tag-container"># <span>Michael Jackson</span></div>
+											<div class="tag-container"># <span>Michael Jackson</span></div>
+											<div class="tag-container"># <span>Michael Jackson</span></div>
+											<div class="tag-container"># <span>Michael Jackson</span></div>
+											<div class="tag-container"># <span>Michael Jackson</span></div>
+											<div class="tag-container"># <span>Michael Jackson</span></div>
+											<div class="tag-container"># <span>Michael Jackson</span></div>
+											<div class="tag-container"># <span>Michael Jackson</span></div>
+											<div class="tag-container"># <span>Michael Jackson</span></div>
+											<div class="tag-container"># <span>Michael Jackson</span></div>
+											<div class="tag-container"># <span>Michael Jackson</span></div>
+											<div class="tag-container"># <span>Michael Jackson</span></div>
+											<div class="tag-container"># <span>Michael Jackson</span></div>
+											<div class="tag-container"># <span>Michael Jackson</span></div>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="cols-md-6 container-input">
-								<div class="mb-3">
-									<label for="basic-url" class="form-label " id="input-label">Nomor Surat</label>
-
-									<input
-										type="text"
-										class="form-control"
-										id="basic-url"
-										aria-describedby="basic-addon3"
-									/>
-								</div>
-							</div>
-						</div>
-						<div class="cols-md-12 container-desc">
-							<p>Deskripsi</p>
-							<div>
-								<p>
-									Synergistically enhance market positioning value with flexible paradigms.
-									Enthusiastically seize state of the art leadership skills via reliable e-services.
-									Enthusiastically enable interactive leadership skills rather than orthogonal
-									vortals. Energistically evisculate viral e-markets.
-								</p>
-							</div>
-						</div>
-						<div class="cols-md-12 container-file mt-3">
-							<div class="cols-md-3 ">
-								<p>File</p>
-								<div class="d-flex align-self-center column-gap-3 inner-container-file">
-									<img src="/File-icon.svg" alt="" />
-									<div class="name-file-container">
-										<p class="fw-bold">Nama-file.pdf</p>
-										<p>Size: 12mb</p>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="cols-md-12 mt-3">
-							<p class="mb-3">Nomor Telepon</p>
-							<div class="d-flex cols-md-12 card-number-container">
-								<div class="card-number">
-									<div class="number-container">
-										<p class="fw-bold">Nomor</p>
-										<p>628129129129 <span>(Duplikasi No)</span></p>
-									</div>
-									<div>
-										<p class="fw-bold">NIK</p>
-										<p>3315076705920001</p>
-									</div>
-									<div>
-										<p class="fw-bold">Tanggal Registrasi</p>
-										<p>2019-11-26</p>
-									</div>
-									<div
-										class="button-number d-flex align-self-center column-gap-3 pe-auto justify-content-center "
-										data-bs-toggle="modal"
-										data-bs-target="#DetailModal"
-									>
-										<img src="/people-search.svg" alt="people search icon" />
-										<p style="margin:0">Cek Nomor</p>
-									</div>
-								</div>
-								<div class="card-number">
-									<div class="number-container">
-										<p class="fw-bold">Nomor</p>
-										<p>628129129129 <span>(Duplikasi No)</span></p>
-									</div>
-									<div>
-										<p class="fw-bold">NIK</p>
-										<p>3315076705920001</p>
-									</div>
-									<div>
-										<p class="fw-bold">Tanggal Registrasi</p>
-										<p>2019-11-26</p>
-									</div>
-									<div
-										class="button-number d-flex align-self-center column-gap-3 pe-auto justify-content-center "
-										data-bs-toggle="modal"
-										data-bs-target="#DetailModal"
-									>
-										<img src="/people-search.svg" alt="people search icon" />
-										<p style="margin:0">Cek Nomor</p>
-									</div>
-								</div>
-								<div class="card-number">
-									<div class="number-container">
-										<p class="fw-bold">Nomor</p>
-										<p>628129129129 <span>(Duplikasi No)</span></p>
-									</div>
-									<div>
-										<p class="fw-bold">NIK</p>
-										<p>3315076705920001</p>
-									</div>
-									<div>
-										<p class="fw-bold">Tanggal Registrasi</p>
-										<p>2019-11-26</p>
-									</div>
-									<div
-										class="button-number d-flex align-self-center column-gap-3 pe-auto justify-content-center "
-										data-bs-toggle="modal"
-										data-bs-target="#DetailModal"
-									>
-										<img src="/people-search.svg" alt="people search icon" />
-										<p style="margin:0">Cek Nomor</p>
-									</div>
-								</div>
-								<div class="card-number">
-									<div class="number-container">
-										<p class="fw-bold">Nomor</p>
-										<p>628129129129 <span>(Duplikasi No)</span></p>
-									</div>
-									<div>
-										<p class="fw-bold">NIK</p>
-										<p>3315076705920001</p>
-									</div>
-									<div>
-										<p class="fw-bold">Tanggal Registrasi</p>
-										<p>2019-11-26</p>
-									</div>
-									<div
-										class="button-number d-flex align-self-center column-gap-3 pe-auto justify-content-center "
-										data-bs-toggle="modal"
-										data-bs-target="#DetailModal"
-									>
-										<img src="/people-search.svg" alt="people search icon" />
-										<p style="margin:0">Cek Nomor</p>
-									</div>
+							<div class="col-md-12 notes-container">
+								<p>Catatan</p>
+								<div class="container-notes-inner">
+									<form action="">
+										<div class="form-header d-flex justify-content-between">
+											<p>Silahkan Tulis Catatan</p>
+											<span
+												><img style="margin-right: .5rem;" src="/reset-icon.svg" alt="" /> Reset</span
+											>
+										</div>
+										<textarea class="tarea-note" name="notes" id="" cols="88" rows="5" />
+										<button class="save-button" type="submit">Simpan</button>
+									</form>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="modal-footer">
+					<div class="modal-footer footer-number">
 						<button
 							type="submit"
-							class="btn btn-secondary add-new"
+							class="btn btn-secondary confirm"
 							data-bs-toggle="modal"
 							data-bs-target="#FeedbackModal">Disetujui</button
 						>
-						<button type="button" class="btn btn-secondary add-new" data-bs-dismiss="modal"
+						<button type="button" class="btn btn-secondary backward" data-bs-dismiss="modal"
 							>Kembali ke Pemohon</button
 						>
 					</div>
@@ -853,7 +802,7 @@
 	.font-weight-bold {
 		margin: 0;
 		margin-bottom: 1.25rem;
-	} /* modal detail */
+	}
 
 	#input-label {
 		color: #fbfdff;
@@ -897,6 +846,8 @@
 		background: #2a2e31;
 		border: 1px solid #5d6167;
 		cursor: pointer;
+		margin-top: 1.3rem;
+		padding: 0.25rem 0;
 	}
 	.card-number p {
 		font-size: 0.75rem;
@@ -904,4 +855,118 @@
 		margin-bottom: 0.375rem;
 		/* padding: 0; */
 	}
+
+	.input-letter {
+		background: #282f36;
+		border: 1px solid #404952;
+		color: #fbfdff;
+	}
+	.input-letter::placeholder {
+		color: #b3b5b6;
+	}
+	/* modal detail */
+
+	/* cek nomor detail */
+	.modal-number {
+		height: auto;
+		color: #fbfdff;
+	}
+	.geo-container {
+		/* border: 1px solid #404952; */
+		margin-bottom: 11rem;
+	}
+	.msisdn-container,
+	.update-container {
+		background: #282f36;
+		border-width: 1px 0px;
+		border-style: solid;
+		border-color: #404952;
+		color: #fbfdff;
+	}
+
+	.update-container {
+		padding: 1.03rem 1rem;
+	}
+	.msisdn-container {
+		padding: 1rem 1rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.last-location,
+	.get-contact {
+		width: 50%;
+		/* background: #282f36; */
+		border-width: 1px 0px;
+		border-style: solid;
+		border-color: #404952;
+	}
+	.card-get-contact {
+		background: #282f36;
+		border-width: 1px 0px;
+		border-style: solid;
+		border-color: #404952;
+		padding: 1.25rem 0.625rem;
+	}
+	.tag-container {
+		color: #fbfdff;
+		padding: 0.5rem 1.28rem;
+		border-bottom: 1px solid #404952;
+		font-size: 0.875rem;
+	}
+	.outer-tag-container {
+		height: 14.25rem;
+		background: #282f36;
+		border-width: 1px 0px;
+		border-style: solid;
+		border-color: #404952;
+		overflow: scroll;
+	}
+	.inner-contact p {
+		color: #fbfdff;
+		margin-bottom: 1.25rem;
+		/* font-weight: bold; */
+		font-size: 16px;
+	}
+	.notes-container {
+		margin-top: 1.5rem;
+	}
+	.notes-container p,
+	.notes-container span {
+		color: #fbfdff;
+	}
+	.notes-container span {
+		font-size: 12px;
+	}
+	.container-notes-inner {
+		padding: 0.75rem 1.25rem;
+		background: #282f36;
+		border-width: 1px 0px;
+		border-style: solid;
+		border-color: #404952;
+	}
+	.tarea-note {
+		resize: none;
+		margin-bottom: 2.13rem;
+	}
+	.save-button {
+		color: #fbfdff;
+		background-color: #2a2e31;
+		border: 1px solid #5d6167;
+		padding: 0.125rem 3.6rem;
+		/* width: 9.75rem;
+		height: 1.7rem; */
+	}
+	.save-button,
+	.confirm,
+	.backward {
+		width: 9.75rem;
+		height: 2.2rem;
+		background: #2a2e31;
+		border: 1px solid #5d6167;
+		color: #fbfdff;
+		font-size: 0.75rem;
+		border-radius: 0;
+	}
+
+	/* cek nomor detail */
 </style>
