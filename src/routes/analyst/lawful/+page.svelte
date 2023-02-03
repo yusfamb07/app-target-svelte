@@ -25,17 +25,6 @@
 					<div class="card-body">
 						<div class="d-flex justify-content-between mb-3">
 							<h6>Request List (Telecomunication)</h6>
-							<!-- <div class="d-flex align-items-center">
-								<button
-									type="button"
-									class="btn btn-secondary add-new"
-									data-bs-toggle="modal"
-									data-bs-target="#FormModal"
-								>
-									<img src="/add.svg" alt="" />
-									Permintaan Baru</button
-								>
-							</div> -->
 						</div>
 
 						<table id="lawfulllist" class="table table-striped mb-6 mt-6" style="width:100%">
@@ -68,10 +57,14 @@
 										>
 									</td>
 									<td>
-										<div class="detail-container">
+										<span
+											class="detail-container"
+											data-bs-toggle="modal"
+											data-bs-target="#DetailModal1"
+										>
 											<img src="/icon.detail.svg" alt="icon detail" />
 											<p>Detail</p>
-										</div></td
+										</span></td
 									>
 								</tr>
 								<tr>
@@ -90,7 +83,10 @@
 										>
 									</td>
 									<td>
-										<span class="detail-container"
+										<span
+											class="detail-container"
+											data-bs-toggle="modal"
+											data-bs-target="#DetailModal1"
 											><img src="/icon.detail.svg" alt="icon detail" />
 											<p>Detail</p></span
 										></td
@@ -111,7 +107,10 @@
 										>
 									</td>
 									<td>
-										<span class="detail-container"
+										<span
+											class="detail-container"
+											data-bs-toggle="modal"
+											data-bs-target="#DetailModal1"
 											><img src="/icon.detail.svg" alt="icon detail" />
 											<p>Detail</p></span
 										></td
@@ -132,7 +131,10 @@
 										>
 									</td>
 									<td>
-										<span class="detail-container"
+										<span
+											class="detail-container"
+											data-bs-toggle="modal"
+											data-bs-target="#DetailModal1"
 											><img src="/icon.detail.svg" alt="icon detail" />
 											<p>Detail</p></span
 										></td
@@ -153,7 +155,10 @@
 										>
 									</td>
 									<td>
-										<span class="detail-container"
+										<span
+											class="detail-container"
+											data-bs-toggle="modal"
+											data-bs-target="#DetailModal1"
 											><img src="/icon.detail.svg" alt="icon detail" />
 											<p>Detail</p></span
 										></td
@@ -174,7 +179,10 @@
 										>
 									</td>
 									<td>
-										<span class="detail-container"
+										<span
+											class="detail-container"
+											data-bs-toggle="modal"
+											data-bs-target="#DetailModal1"
 											><img src="/icon.detail.svg" alt="icon detail" />
 											<p>Detail</p></span
 										></td
@@ -367,7 +375,7 @@
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Lawful Interception Detail</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Binda Jakarta</h5>
 						<button
 							type="button"
 							class="btn-close btn-close-white "
@@ -449,6 +457,359 @@
 				</div>
 			</div>
 		</div>
+		<div
+			class="modal fade"
+			id="DetailModal1"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Binda Jakarta</h5>
+						<button
+							type="button"
+							class="btn-close btn-close-white "
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						/>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12">
+								<h6 class="font-weight-bold">Informasi Permintaan</h6>
+							</div>
+						</div>
+						<div class="cols-md-12 d-flex column-gap-3" id="outer-container">
+							<div class="cols-md-6 container-input">
+								<div class="mb-3 ">
+									<label for="basic-url" class="form-label " id="input-label">Nomor Surat</label>
+
+									<input
+										type="text"
+										class="form-control"
+										id="basic-url"
+										aria-describedby="basic-addon3"
+									/>
+								</div>
+							</div>
+							<div class="cols-md-6 container-input">
+								<div class="mb-3">
+									<label for="basic-url" class="form-label " id="input-label">Nomor Surat</label>
+
+									<input
+										type="text"
+										class="form-control"
+										id="basic-url"
+										aria-describedby="basic-addon3"
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="cols-md-12 container-desc">
+							<p>Deskripsi</p>
+							<div>
+								<p>
+									Synergistically enhance market positioning value with flexible paradigms.
+									Enthusiastically seize state of the art leadership skills via reliable e-services.
+									Enthusiastically enable interactive leadership skills rather than orthogonal
+									vortals. Energistically evisculate viral e-markets.
+								</p>
+							</div>
+						</div>
+						<div class="cols-md-12 container-file mt-3">
+							<div class="cols-md-3 ">
+								<p>File</p>
+								<div class="d-flex align-self-center column-gap-3 inner-container-file">
+									<img src="/File-icon.svg" alt="" />
+									<div class="name-file-container">
+										<p class="fw-bold">Nama-file.pdf</p>
+										<p>Size: 12mb</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cols-md-12 mt-3">
+							<p class="mb-3">Nomor Telepon</p>
+							<div class="d-flex cols-md-12 card-number-container">
+								<div class="card-number">
+									<div class="number-container">
+										<p class="fw-bold">Nomor</p>
+										<p>628129129129 <span>(Duplikasi No)</span></p>
+									</div>
+									<div>
+										<p class="fw-bold">NIK</p>
+										<p>3315076705920001</p>
+									</div>
+									<div>
+										<p class="fw-bold">Tanggal Registrasi</p>
+										<p>2019-11-26</p>
+									</div>
+									<div
+										class="button-number d-flex align-self-center column-gap-3 pe-auto justify-content-center "
+										data-bs-toggle="modal"
+										data-bs-target="#cekNumberModal"
+									>
+										<img src="/people-search.svg" alt="people search icon" />
+										<p style="margin:0">Cek Nomor</p>
+									</div>
+								</div>
+								<div class="card-number">
+									<div class="number-container">
+										<p class="fw-bold">Nomor</p>
+										<p>628129129129 <span>(Duplikasi No)</span></p>
+									</div>
+									<div>
+										<p class="fw-bold">NIK</p>
+										<p>3315076705920001</p>
+									</div>
+									<div>
+										<p class="fw-bold">Tanggal Registrasi</p>
+										<p>2019-11-26</p>
+									</div>
+									<div
+										class="button-number d-flex align-self-center column-gap-3 pe-auto justify-content-center "
+										data-bs-toggle="modal"
+										data-bs-target="#cekNumberModal"
+									>
+										<img src="/people-search.svg" alt="people search icon" />
+										<p style="margin:0">Cek Nomor</p>
+									</div>
+								</div>
+								<div class="card-number">
+									<div class="number-container">
+										<p class="fw-bold">Nomor</p>
+										<p>628129129129 <span>(Duplikasi No)</span></p>
+									</div>
+									<div>
+										<p class="fw-bold">NIK</p>
+										<p>3315076705920001</p>
+									</div>
+									<div>
+										<p class="fw-bold">Tanggal Registrasi</p>
+										<p>2019-11-26</p>
+									</div>
+									<div
+										class="button-number d-flex align-self-center column-gap-3 pe-auto justify-content-center "
+										data-bs-toggle="modal"
+										data-bs-target="#cekNumberModal"
+									>
+										<img src="/people-search.svg" alt="people search icon" />
+										<p style="margin:0">Cek Nomor</p>
+									</div>
+								</div>
+								<div class="card-number">
+									<div class="number-container">
+										<p class="fw-bold">Nomor</p>
+										<p>628129129129 <span>(Duplikasi No)</span></p>
+									</div>
+									<div>
+										<p class="fw-bold">NIK</p>
+										<p>3315076705920001</p>
+									</div>
+									<div>
+										<p class="fw-bold">Tanggal Registrasi</p>
+										<p>2019-11-26</p>
+									</div>
+									<div
+										class="button-number d-flex align-self-center column-gap-3 pe-auto justify-content-center "
+										data-bs-toggle="modal"
+										data-bs-target="#cekNumberModal"
+									>
+										<img src="/people-search.svg" alt="people search icon" />
+										<p style="margin:0">Cek Nomor</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div
+			class="modal fade"
+			id="cekNumberModal"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">
+							Binda Jakarta <span>(628129129129)</span>
+						</h5>
+						<button
+							type="button"
+							class="btn-close btn-close-white "
+							data-bs-dismiss="modal"
+							aria-label="Close"
+						/>
+					</div>
+					<div class="modal-body">
+						<div class="row">
+							<div class="col-md-12">
+								<h6 class="font-weight-bold">Informasi Peta</h6>
+							</div>
+						</div>
+						<div class="cols-md-12 d-flex column-gap-3" id="outer-container">
+							<div class="cols-md-6 container-input">
+								<div class="mb-3 ">
+									<label for="basic-url" class="form-label " id="input-label">Nomor Surat</label>
+
+									<input
+										type="text"
+										class="form-control"
+										id="basic-url"
+										aria-describedby="basic-addon3"
+									/>
+								</div>
+							</div>
+							<div class="cols-md-6 container-input">
+								<div class="mb-3">
+									<label for="basic-url" class="form-label " id="input-label">Nomor Surat</label>
+
+									<input
+										type="text"
+										class="form-control"
+										id="basic-url"
+										aria-describedby="basic-addon3"
+									/>
+								</div>
+							</div>
+						</div>
+						<div class="cols-md-12 container-desc">
+							<p>Deskripsi</p>
+							<div>
+								<p>
+									Synergistically enhance market positioning value with flexible paradigms.
+									Enthusiastically seize state of the art leadership skills via reliable e-services.
+									Enthusiastically enable interactive leadership skills rather than orthogonal
+									vortals. Energistically evisculate viral e-markets.
+								</p>
+							</div>
+						</div>
+						<div class="cols-md-12 container-file mt-3">
+							<div class="cols-md-3 ">
+								<p>File</p>
+								<div class="d-flex align-self-center column-gap-3 inner-container-file">
+									<img src="/File-icon.svg" alt="" />
+									<div class="name-file-container">
+										<p class="fw-bold">Nama-file.pdf</p>
+										<p>Size: 12mb</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cols-md-12 mt-3">
+							<p class="mb-3">Nomor Telepon</p>
+							<div class="d-flex cols-md-12 card-number-container">
+								<div class="card-number">
+									<div class="number-container">
+										<p class="fw-bold">Nomor</p>
+										<p>628129129129 <span>(Duplikasi No)</span></p>
+									</div>
+									<div>
+										<p class="fw-bold">NIK</p>
+										<p>3315076705920001</p>
+									</div>
+									<div>
+										<p class="fw-bold">Tanggal Registrasi</p>
+										<p>2019-11-26</p>
+									</div>
+									<div
+										class="button-number d-flex align-self-center column-gap-3 pe-auto justify-content-center "
+										data-bs-toggle="modal"
+										data-bs-target="#DetailModal"
+									>
+										<img src="/people-search.svg" alt="people search icon" />
+										<p style="margin:0">Cek Nomor</p>
+									</div>
+								</div>
+								<div class="card-number">
+									<div class="number-container">
+										<p class="fw-bold">Nomor</p>
+										<p>628129129129 <span>(Duplikasi No)</span></p>
+									</div>
+									<div>
+										<p class="fw-bold">NIK</p>
+										<p>3315076705920001</p>
+									</div>
+									<div>
+										<p class="fw-bold">Tanggal Registrasi</p>
+										<p>2019-11-26</p>
+									</div>
+									<div
+										class="button-number d-flex align-self-center column-gap-3 pe-auto justify-content-center "
+										data-bs-toggle="modal"
+										data-bs-target="#DetailModal"
+									>
+										<img src="/people-search.svg" alt="people search icon" />
+										<p style="margin:0">Cek Nomor</p>
+									</div>
+								</div>
+								<div class="card-number">
+									<div class="number-container">
+										<p class="fw-bold">Nomor</p>
+										<p>628129129129 <span>(Duplikasi No)</span></p>
+									</div>
+									<div>
+										<p class="fw-bold">NIK</p>
+										<p>3315076705920001</p>
+									</div>
+									<div>
+										<p class="fw-bold">Tanggal Registrasi</p>
+										<p>2019-11-26</p>
+									</div>
+									<div
+										class="button-number d-flex align-self-center column-gap-3 pe-auto justify-content-center "
+										data-bs-toggle="modal"
+										data-bs-target="#DetailModal"
+									>
+										<img src="/people-search.svg" alt="people search icon" />
+										<p style="margin:0">Cek Nomor</p>
+									</div>
+								</div>
+								<div class="card-number">
+									<div class="number-container">
+										<p class="fw-bold">Nomor</p>
+										<p>628129129129 <span>(Duplikasi No)</span></p>
+									</div>
+									<div>
+										<p class="fw-bold">NIK</p>
+										<p>3315076705920001</p>
+									</div>
+									<div>
+										<p class="fw-bold">Tanggal Registrasi</p>
+										<p>2019-11-26</p>
+									</div>
+									<div
+										class="button-number d-flex align-self-center column-gap-3 pe-auto justify-content-center "
+										data-bs-toggle="modal"
+										data-bs-target="#DetailModal"
+									>
+										<img src="/people-search.svg" alt="people search icon" />
+										<p style="margin:0">Cek Nomor</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button
+							type="submit"
+							class="btn btn-secondary add-new"
+							data-bs-toggle="modal"
+							data-bs-target="#FeedbackModal">Disetujui</button
+						>
+						<button type="button" class="btn btn-secondary add-new" data-bs-dismiss="modal"
+							>Kembali ke Pemohon</button
+						>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -464,9 +825,83 @@
 		/* padding-top: 0.5rem; */
 		width: 64px;
 		height: 23px;
+		background: rgba(35, 40, 46, 0.86);
 	}
-	/* .detail-container > img {
-		width: 10px;
-		height: 8px;
-	} */
+	/* modal detail */
+	.modal-dialog {
+		justify-content: center;
+		padding: 0;
+		/* margin: 0; */
+	}
+	.modal-content {
+		padding: 2rem 1.813rem 1.44rem 2.5rem;
+		margin: 4rem 0 0 -16.5rem;
+		height: 48.563rem;
+		width: 58.12rem;
+	}
+	.modal-header {
+		padding-bottom: 0;
+		margin-bottom: 1.3rem;
+	}
+	.modal-body {
+		font-size: 1rem;
+		padding-top: 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.font-weight-bold {
+		margin: 0;
+		margin-bottom: 1.25rem;
+	} /* modal detail */
+
+	#input-label {
+		color: #fbfdff;
+	}
+	#outer-container {
+		display: flex;
+	}
+	.container-input {
+		width: 50%;
+	}
+
+	.container-desc div {
+		background: #282f36;
+		border: 1px solid #404952;
+		font-weight: 400;
+		font-size: 1rem;
+		padding: 0.75rem;
+		font-family: 'Chakra Petch';
+	}
+	.inner-container-file {
+		width: 11.25rem;
+		padding: 0.375rem 1.042rem;
+		background: #282f36;
+		border: 1px solid #404952;
+	}
+	.name-file-container p {
+		margin: 0;
+		padding: 0;
+	}
+	.card-number-container {
+		gap: 2rem;
+	}
+	.card-number {
+		/* height: 219px; */
+		/* width: 180px; */
+		padding: 0.75rem;
+		background: #282f36;
+		border: 1px solid #404952;
+	}
+	.button-number {
+		background: #2a2e31;
+		border: 1px solid #5d6167;
+		cursor: pointer;
+	}
+	.card-number p {
+		font-size: 0.75rem;
+		margin: 0;
+		margin-bottom: 0.375rem;
+		/* padding: 0; */
+	}
 </style>
