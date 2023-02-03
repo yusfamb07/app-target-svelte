@@ -21,7 +21,10 @@
 				backgroundColor: '#2F3740',
 				colors: ['#000'],
 				region: 'ID',
-				resolution: 'provinces'
+				resolution: 'provinces',
+				legend: 'none',
+				width: '465',
+				height: '200'
 			};
 			// var options = {};
 			// options['region'] = 'ID';
@@ -39,4 +42,4 @@
 	// var chart =
 </script>
 
-<div id="regions_div" style="width: 450px !important; height: 200px !important;" />
+<div id="regions_div" />
