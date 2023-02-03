@@ -23,6 +23,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"antd": "^5.1.7",
 		"apexcharts": "^3.36.3",
 		"svelte-multiselect": "^8.3.0"
 	}

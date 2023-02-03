@@ -27,17 +27,17 @@
 			</div>
 		</div>
 		<li>
-			<a class="list-group-item active bg-dark text-white" href="#!"
+			<a class="list-group-item active bg-dark text-white" href="../users/dashboard"
 				><img class="icon p-1 ml-2" src="/dashboard.svg" alt="" />Dashboard Aproval Target</a
 			>
 		</li>
-		<a class="list-group-item bg-dark text-white" href="../"
+		<a class="list-group-item bg-dark text-white" href="../users/lawfull"
 			><img class="icon p-1" src="/lawfull.svg" alt="" />Lawful Interception Request</a
 		>
-		<a class="list-group-item bg-dark text-white" href="#!"
+		<a class="list-group-item bg-dark text-white" href="../users/geolocation"
 			><img class="icon p-1" src="/geo.svg" alt="" />Geolocation Request</a
 		>
-		<a class="list-group-item bg-dark text-white" href="#!"
+		<a class="list-group-item bg-dark text-white" href="../users/telecomunication"
 			><img class="icon p-1" src="/tele.svg" alt="" />Telecomunication Request</a
 		>
 	</ul>

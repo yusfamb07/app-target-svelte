@@ -363,7 +363,7 @@
 								<p>:</p>
 							</div>
 							<div class="col-md-6">
-								<p id="device">APPLE INC APPLE IPHONE 11 PRO MAX (A2220)</p>
+								<p id="device">14/Oktober/2022</p>
 							</div>
 							<div class="col-md-4">
 								<p>Device</p>
@@ -372,7 +372,7 @@
 								<p>:</p>
 							</div>
 							<div class="col-md-6">
-								<p id="device">14/Oktober/2022</p>
+								<p id="device">APPLE INC APPLE IPHONE 11 PRO MAX (A2220)</p>
 							</div>
 							<div class="col-md-12 mb-2">
 								<h6 class="font-weight-bold">Geolocation Information</h6>

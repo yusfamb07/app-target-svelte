@@ -1,6 +1,7 @@
 <script>
 	import PieChartBinda from '../../../compenents/PieChartBinda.svelte';
 	import LineChart from '../../../compenents/LineChart.svelte';
+	import Ontologi from '../../../compenents/Ontologi.svelte';
 	import { onMount } from 'svelte';
 	import MultiSelect from 'svelte-multiselect';
 
@@ -9,7 +10,7 @@
 	let selected = [];
 
 	onMount(async () => {
-		new DataTable('#telelist');
+		new DataTable('#tablelist');
 	});
 </script>
 
@@ -34,7 +35,7 @@
 							</div>
 						</div>
 
-						<table id="telelist" class="table table-striped mb-5 mt-5" style="width:100%">
+						<table id="tablelist" class="table table-striped mb-5 mt-5" style="width:100%">
 							<thead>
 								<tr>
 									<th>No</th>
@@ -132,7 +133,7 @@
 									<td>Nama File</td>
 									<td>
 										<a
-											href="#"
+											href="#!"
 											data-bs-toggle="modal"
 											data-bs-target="#DetailModal"
 											style="color: #219386;">Disetujui</a
@@ -364,31 +365,108 @@
 							<div class="col-md-6">
 								<p id="device">APPLE INC APPLE IPHONE 11 PRO MAX (A2220)</p>
 							</div>
-							<div class="col-md-12">
-								<h6 class="font-weight-bold">Tapping Recording</h6>
-							</div>
 							<div class="col-md-4">
-								<p>Record Title</p>
+								<p>Tanggal Registrasi</p>
 							</div>
 							<div class="col-md-1">
 								<p>:</p>
 							</div>
 							<div class="col-md-6">
-								<p id="record-title">Rekaman dari Bondowoso</p>
-							</div>
-							<div class="col-md-12 mb-3">
-								<audio class="w-100 audio-player" controls autoplay>
-									<source src="#" type="audio/ogg" />
-								</audio>
+								<p id="device">14/Oktober/2022</p>
 							</div>
 							<div class="col-md-12">
-								<textarea
-									class="form-control mb-3 modal-form"
-									id="rekaman"
-									placeholder="Tulis rekaman disini ........"
-									rows="3"
-									required
-								/>
+								<h6 class="font-weight-bold">CDR Information</h6>
+							</div>
+							<div class="col-md-12 mt-3 mb-3">
+								<ul class="nav nav-pills justify-content-between">
+									<li class="nav-item">
+										<a class="nav-link active" data-bs-toggle="pill" href="#callin"
+											>Panggilan Masuk</a
+										>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" data-bs-toggle="pill" href="#callout">Panggilan Keluar</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" data-bs-toggle="pill" href="#msgin">Pesan Masuk</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" data-bs-toggle="pill" href="#msgout">Pesan Keluar</a>
+									</li>
+								</ul>
+								<div class="tab-content mt-3">
+									<div class="tab-pane active" id="callin" style="color: white;">
+										<Ontologi />
+										<div class="mt-3">
+											<div class="card">
+												<div class="card-body">
+													<div class="d-flex align-items-center">
+														<img src="/eclipsered.svg" alt="" />
+														<h6 class="mt-2" style="margin-left: 5px;">Detail Panggilan Masuk</h6>
+													</div>
+													<div class="container">
+														<div class="row">
+															<div class="col-md-3">
+																<div class="d-flex align-items-center">
+																	<img src="/callend.svg" alt="" />
+																	<p class="mt-3" style="margin-left: 5px;">0826371829192</p>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="d-flex justify-content-center">
+																	<p class="">Call Time :</p>
+																	<p class="">14:12</p>
+																</div>
+																<img
+																	src="/lengh.svg"
+																	style="position: absolute; top: 95px;"
+																	alt=""
+																/>
+															</div>
+															<div class="col-md-3">
+																<div class="d-flex align-items-center">
+																	<img src="/callend.svg" alt="" />
+																	<p class="mt-3" style="margin-left: 5px;">(+33)7755545</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade" id="callout" style="color: white; ">...</div>
+									<div class="tab-pane fade" id="msgin" style="color: white; ">
+										<table id="tablelist" class="table table-striped mb-5 mt-5" style="width:100%">
+											<thead>
+												<tr>
+													<th>MSISDN</th>
+													<th>Isi Pesan</th>
+													<th>Waktu</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>(+33)7 75 55 45 48</td>
+													<td
+														>Intrinsicly deploy scalable potentialities via seamless applications.
+														Dynamically.</td
+													>
+													<td>12:00, 12/12/2022</td>
+												</tr>
+												<tr>
+													<td>(+33)7 75 55 45 48</td>
+													<td
+														>Intrinsicly deploy scalable potentialities via seamless applications.
+														Dynamically.</td
+													>
+													<td>12:00, 12/12/2022</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="tab-pane fade" id="msgout" style="color: white; ">...</div>
+								</div>
 							</div>
 						</div>
 					</div>
