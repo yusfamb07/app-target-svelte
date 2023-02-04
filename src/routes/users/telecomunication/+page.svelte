@@ -1,9 +1,13 @@
 <script>
 	import PieChartBinda from '../../../compenents/PieChartBinda.svelte';
 	import LineChart from '../../../compenents/LineChart.svelte';
-	import Ontologi from '../../../compenents/Ontologi.svelte';
+	import OntologiCallIn from '../../../compenents/OntologiCallIn.svelte';
+	import OntologiCallOut from '../../../compenents/OntologiCallOut.svelte';
+	import OntologiMsgOut from '../../../compenents/OntologiMsgOut.svelte';
+	import OntologiMsgIn from '../../../compenents/OntologiMsgIn.svelte';
 	import { onMount } from 'svelte';
 	import MultiSelect from 'svelte-multiselect';
+	import { DateInput } from 'date-picker-svelte';
 
 	const ui_libs = [`Svelte`, `React`, `Vue`, `Angular`, `...`];
 
@@ -12,6 +16,10 @@
 	onMount(async () => {
 		new DataTable('#tablelist');
 	});
+
+	// onMount(async () => {
+	// 	const datepicker = new datepicker('#tanggal');
+	// });
 </script>
 
 <div class="konten">
@@ -103,7 +111,7 @@
 									<td>Nama File</td>
 									<td>
 										<a
-											href="#"
+											href="#!"
 											data-bs-toggle="modal"
 											data-bs-target="#DetailModal"
 											style="color: #219386;">Disetujui</a
@@ -150,10 +158,28 @@
 			<div class="col-md-6">
 				<div class="card" style="height: 470px;">
 					<div class="card-body">
-						<div class="d-flex justify-content-between">
-							<h6>Request Statistics</h6>
-							<input type="date" name="tahun" id="" />
+						<div class="row">
+							<div class="col-md-7">
+								<h6 class="mt-2">Request Statistics</h6>
+							</div>
+							<div class="col-md-3">
+								<div class="d-flex align-items-center">
+									<p class="mt-2">Filter</p>
+									<!-- <input
+										class="filter-form"
+										type="text"
+										name=""
+										id="datetimepicker9"
+										placeholder="2022"
+									/> -->
+									<div>
+										<DateInput format="yyyy" placeholder="2023" class="filter-form" />
+									</div>
+								</div>
+								<!-- <DateInput datepickerFormat="yyyy" /> -->
+							</div>
 						</div>
+						<div class="d-flex justify-content-between" />
 						<div class="mt-3">
 							<LineChart />
 						</div>
@@ -396,7 +422,7 @@
 								</ul>
 								<div class="tab-content mt-3">
 									<div class="tab-pane active" id="callin" style="color: white;">
-										<Ontologi />
+										<OntologiCallIn />
 										<div class="mt-3">
 											<div class="card">
 												<div class="card-body">
@@ -435,9 +461,51 @@
 											</div>
 										</div>
 									</div>
-									<div class="tab-pane fade" id="callout" style="color: white; ">...</div>
+									<div class="tab-pane fade" id="callout" style="color: white; ">
+										<OntologiCallOut />
+										<div class="mt-3">
+											<div class="card">
+												<div class="card-body">
+													<div class="d-flex align-items-center">
+														<img src="/eclipsered.svg" alt="" />
+														<h6 class="mt-2" style="margin-left: 5px;">Detail Panggilan Keluar</h6>
+													</div>
+													<div class="container">
+														<div class="row">
+															<div class="col-md-3">
+																<div class="d-flex align-items-center">
+																	<img src="/callend.svg" alt="" />
+																	<p class="mt-3" style="margin-left: 5px;">0826371829192</p>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="d-flex justify-content-center">
+																	<p class="">Call Time :</p>
+																	<p class="">14:12</p>
+																</div>
+																<img
+																	src="/lengh.svg"
+																	style="position: absolute; top: 95px;"
+																	alt=""
+																/>
+															</div>
+															<div class="col-md-3">
+																<div class="d-flex align-items-center">
+																	<img src="/callend.svg" alt="" />
+																	<p class="mt-3" style="margin-left: 5px;">(+33)7755545</p>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 									<div class="tab-pane fade" id="msgin" style="color: white; ">
-										<table id="tablelist" class="table table-striped mb-5 mt-5" style="width:100%">
+										<div class="">
+											<OntologiMsgIn />
+										</div>
+										<table id="tablelist" class="table table-striped mb-2 mt-2" style="width:100%">
 											<thead>
 												<tr>
 													<th>MSISDN</th>
@@ -465,7 +533,38 @@
 											</tbody>
 										</table>
 									</div>
-									<div class="tab-pane fade" id="msgout" style="color: white; ">...</div>
+									<div class="tab-pane fade" id="msgout" style="color: white; ">
+										<div class="">
+											<OntologiMsgOut />
+										</div>
+										<table id="tablelist" class="table table-striped mb-2 mt-2" style="width:100%">
+											<thead>
+												<tr>
+													<th>MSISDN</th>
+													<th>Isi Pesan</th>
+													<th>Waktu</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>(+33)7 75 55 45 48</td>
+													<td
+														>Intrinsicly deploy scalable potentialities via seamless applications.
+														Dynamically.</td
+													>
+													<td>12:00, 12/12/2022</td>
+												</tr>
+												<tr>
+													<td>(+33)7 75 55 45 48</td>
+													<td
+														>Intrinsicly deploy scalable potentialities via seamless applications.
+														Dynamically.</td
+													>
+													<td>12:00, 12/12/2022</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 								</div>
 							</div>
 						</div>

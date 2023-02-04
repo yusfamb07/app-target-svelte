@@ -4,6 +4,7 @@
 	import GeoChart from '../../../compenents/GeoChart.svelte';
 	import { onMount } from 'svelte';
 	import MultiSelect from 'svelte-multiselect';
+	import { DateInput } from 'date-picker-svelte';
 
 	const ui_libs = [`Svelte`, `React`, `Vue`, `Angular`, `...`];
 
@@ -150,9 +151,26 @@
 			<div class="col-md-6">
 				<div class="card" style="height: 470px;">
 					<div class="card-body">
-						<div class="d-flex justify-content-between">
-							<h6>Request Statistics</h6>
-							<input type="date" name="tahun" id="" />
+						<div class="row">
+							<div class="col-md-7">
+								<h6 class="mt-2 mr-2">Request Statistics</h6>
+							</div>
+							<div class="col-md-3">
+								<div class="d-flex align-items-center">
+									<p class="mt-2">Filter</p>
+									<!-- <input
+										class="filter-form"
+										type="text"
+										name=""
+										id="datetimepicker9"
+										placeholder="2022"
+									/> -->
+									<div>
+										<DateInput format="yyyy" placeholder="2023" class="filter-form" />
+									</div>
+								</div>
+								<!-- <DateInput datepickerFormat="yyyy" /> -->
+							</div>
 						</div>
 						<div class="mt-3">
 							<LineChart />

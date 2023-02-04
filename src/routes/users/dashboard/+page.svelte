@@ -2,6 +2,7 @@
 	import PieChart from '../../../compenents/PieChart.svelte';
 	import BarChart from '../../../compenents/BarChart.svelte';
 	import { onMount } from 'svelte';
+	import { DateInput } from 'date-picker-svelte';
 
 	onMount(async () => {
 		new DataTable('#requestlist');
@@ -88,12 +89,49 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-body">
-						<div class="d-flex justify-content-between mb-3">
+						<!-- <div class="d-flex justify-content-between mb-3">
 							<h6>Request List</h6>
 							<div class="d-flex">
 								<form action="">
 									<input type="date" name="" id="" />
 								</form>
+							</div>
+						</div> -->
+						<div class="row">
+							<div class="col-md-8">
+								<h6>Request List</h6>
+							</div>
+							<div class="col-md-2">
+								<div class="d-flex align-items-center">
+									<p class="mt-3">From</p>
+									<!-- <input
+										class="filter-form"
+										type="text"
+										name=""
+										id="datetimepicker9"
+										placeholder="2022"
+									/> -->
+									<div>
+										<DateInput format="yyyy" placeholder="Desember 2022" class="filter-form" />
+									</div>
+								</div>
+								<!-- <DateInput datepickerFormat="yyyy" /> -->
+							</div>
+							<div class="col-md-2">
+								<div class="d-flex align-items-center">
+									<p class="mt-3">To</p>
+									<!-- <input
+										class="filter-form"
+										type="text"
+										name=""
+										id="datetimepicker9"
+										placeholder="2022"
+									/> -->
+									<div>
+										<DateInput format="yyyy" placeholder="Januari 2022" class="filter-form" />
+									</div>
+								</div>
+								<!-- <DateInput datepickerFormat="yyyy" /> -->
 							</div>
 						</div>
 						<table id="requestlist" class="table table-striped mb-5 mt-5" style="width:100%">

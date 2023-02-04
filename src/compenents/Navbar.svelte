@@ -1,3 +1,8 @@
+<script>
+	import NavLink from './NavLink.svelte';
+	import icon from '../lib/dashboard.svg';
+</script>
+
 <nav class="navbar navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="container-fluid">
 		<a class="navbar-brand" />
@@ -26,14 +31,16 @@
 				</div>
 			</div>
 		</div>
+
 		<li>
-			<a class="list-group-item active bg-dark text-white" href="../users/dashboard"
-				><img class="icon p-1 ml-2" src="/dashboard.svg" alt="" />Dashboard Aproval Target</a
-			>
+			<NavLink href="../users/dashboard" title="Dashboard Approval Target" {icon} />
 		</li>
-		<a class="list-group-item bg-dark text-white" href="../users/lawfull"
+		<li>
+			<NavLink href="../users/lawfull" title="Lawful Interception Request" {icon} />
+		</li>
+		<!-- <a class="list-group-item bg-dark text-white" href="../users/lawfull"
 			><img class="icon p-1" src="/lawfull.svg" alt="" />Lawful Interception Request</a
-		>
+		> -->
 		<a class="list-group-item bg-dark text-white" href="../users/geolocation"
 			><img class="icon p-1" src="/geo.svg" alt="" />Geolocation Request</a
 		>
