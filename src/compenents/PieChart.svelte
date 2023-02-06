@@ -1,4 +1,7 @@
 <script>
+	export let description;
+	export let series;
+	export let color;
 	import { onMount } from 'svelte';
 	onMount(async () => {
 		const ApexCharts = (await import('apexcharts')).default;
@@ -28,20 +31,15 @@
 				show: false
 			},
 			fill: {
-				colors: ['#D58407', '#17665D', '#1A4C7A', '#903C29']
+				colors: color
 			},
-			series: [44, 55, 13, 43],
+			series: series,
 			chart: {
 				width: 460,
 				type: 'pie'
 			},
 
-			labels: [
-				'Lawful Interception Request',
-				'Geolocation Request',
-				'Telecomunication Request',
-				'All Pending Request'
-			],
+			labels: description,
 			responsive: [
 				{
 					breakpoint: 480,

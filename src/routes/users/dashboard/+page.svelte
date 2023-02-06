@@ -65,7 +65,7 @@
 					<div class="card-body">
 						<h6>Pie Chart Request</h6>
 						<div class="mt-5">
-							<PieChart />
+							<PieChart test={'oketest'} />
 						</div>
 					</div>
 				</div>
