@@ -2,6 +2,7 @@
 	export let description;
 	export let series;
 	export let color;
+	export let fillColor;
 	import { onMount } from 'svelte';
 	onMount(async () => {
 		const ApexCharts = (await import('apexcharts')).default;
@@ -10,7 +11,7 @@
 				show: true,
 				position: 'right',
 				markers: {
-					fillColors: ['#D58407', '#17665D', '#1A4C7A', '#903C29'],
+					fillColors: fillColor,
 					radius: 0,
 					customHTML: undefined,
 					onClick: undefined,

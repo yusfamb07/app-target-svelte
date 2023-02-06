@@ -660,14 +660,13 @@
 								<h6 class="font-weight-bold">Informasi Peta</h6>
 							</div>
 							<div class="col-md-12 geo-container">
-								<GeoChart />
+								<GeoChart width="856" height="315" />
 							</div>
 							<div class="col-md-12 d-flex column-gap-3 last-location-container">
 								<div class="last-location">
 									<p>History Location</p>
 
 									<div class="update-container">
-										<p style="color:#fbfdff">Update MSISDN</p>
 										<table id="msisdnList" class="table table-striped mb-3 mt-3" style="width:100%">
 											<thead>
 												<tr>
@@ -892,7 +891,8 @@
 	.get-contact {
 		width: 50%;
 		/* background: #282f36; */
-		border-width: 1px 0px;
+		border-width: 0px 0px 1px 0;
+
 		border-style: solid;
 		border-color: #404952;
 	}
