@@ -5,6 +5,7 @@
 	import { onMount } from 'svelte';
 	import MultiSelect from 'svelte-multiselect';
 	import { DateInput } from 'date-picker-svelte';
+	import Navbar from '../../../compenents/Navbar.svelte';
 
 	const ui_libs = [`Svelte`, `React`, `Vue`, `Angular`, `...`];
 
@@ -14,6 +15,8 @@
 		new DataTable('#geolist');
 	});
 </script>
+
+<Navbar />
 
 <div class="konten">
 	<div class="container-fluid mt-3">

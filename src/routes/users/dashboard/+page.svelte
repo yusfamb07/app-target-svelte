@@ -3,11 +3,14 @@
 	import BarChart from '../../../compenents/BarChart.svelte';
 	import { onMount } from 'svelte';
 	import { DateInput } from 'date-picker-svelte';
+	import Navbar from '../../../compenents/Navbar.svelte';
 
 	onMount(async () => {
 		new DataTable('#requestlist');
 	});
 </script>
+
+<Navbar />
 
 <div class="konten">
 	<div class="container-fluid mt-3">

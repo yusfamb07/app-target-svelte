@@ -9,15 +9,29 @@
 	// onMount(() => {
 	// 	currentPath = window.location.pathname;
 	// });
+	let path;
+
+	function getPath(currentPath) {
+		path = currentPath;
+		console.log(path);
+	}
+
+	$: getPath($page.url.pathname);
 </script>
 
-<a
-	class="list-group-item bg-dark  text-white"
+<!-- <a
+	class="list-group-item bg-dark text-white "
 	class:active={$page.url.pathname.split('/')[1] === href.split('/')[1]}
 	{href}
 	><img class="icon p-1" src="/dashboard.svg" alt="" />
 	{title}
-</a>
+</a> -->
+
+<li class={path === '' ? 'list-group-item bg-dark  active' : ''}>
+	<a class="text-white" id="txt-link" {href}
+		><img class="icon p-1" src="/dashboard.svg" alt="" />{title}</a
+	>
+</li>
 
 <!-- <a
 	{href}
@@ -27,16 +41,4 @@
 	{title}
 </a> -->
 <style>
-	.list-group-item {
-		border: none !important;
-		padding: 5px;
-		font-family: myFirstFont;
-		font-size: 14px;
-	}
-	.list-group-item.active {
-		border-top: 1px solid #8994a5 !important;
-		border-bottom: 1px solid #8994a5 !important;
-		z-index: 2;
-		background-image: radial-gradient(#596573 5%, #404953 15%, #21262b 60%);
-	}
 </style>

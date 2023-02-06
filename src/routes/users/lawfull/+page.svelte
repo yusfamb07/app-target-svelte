@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 	import MultiSelect from 'svelte-multiselect';
 	import { DateInput } from 'date-picker-svelte';
+	import Navbar from '../../../compenents/Navbar.svelte';
 
 	const ui_libs = [`Svelte`, `React`, `Vue`, `Angular`, `...`];
 
@@ -17,6 +18,8 @@
 	// 	new select2('#notelepon');
 	// });
 </script>
+
+<Navbar />
 
 <div class="konten">
 	<div class="container-fluid mt-3">
@@ -159,18 +162,9 @@
 								<h6 class="mt-2">Request Statistics</h6>
 							</div>
 							<div class="col-md-3">
-								<div class="d-flex align-items-center">
-									<p class="mt-2">Filter</p>
-									<!-- <input
-										class="filter-form"
-										type="text"
-										name=""
-										id="datetimepicker9"
-										placeholder="2022"
-									/> -->
-									<div>
-										<DateInput format="yyyy" placeholder="2023" class="filter-form" />
-									</div>
+								<div class="d-flex align-items-center gap-2">
+									<p class="mt-3 ">Filter</p>
+									<DateInput format="yyyy" placeholder="2023" class="filter-form" />
 								</div>
 								<!-- <DateInput datepickerFormat="yyyy" /> -->
 							</div>
