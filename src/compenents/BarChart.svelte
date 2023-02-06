@@ -1,7 +1,7 @@
 <script>
 	export let data;
 	export let categories;
-	let gradients = ['#903C29', '#D58407', '#17665D', '#1A4C7A', '#29907D '];
+	// let gradients = ;
 	import { onMount } from 'svelte';
 	onMount(async () => {
 		const ApexCharts = (await import('apexcharts')).default;
@@ -25,9 +25,10 @@
 					horizontal: true
 				}
 			},
+
 			fill: {
+				colors: ['#50F8F8'],
 				type: 'gradient',
-				colors: gradients,
 				gradient: {
 					shadeIntensity: 0.7,
 					opacityFrom: 0.5,
