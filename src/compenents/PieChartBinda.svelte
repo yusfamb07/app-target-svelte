@@ -30,7 +30,7 @@
 			fill: {
 				colors: ['#903C29', '#17665D']
 			},
-			series: [44, 55],
+			series: [45, 55],
 			chart: {
 				width: 430,
 				type: 'pie'

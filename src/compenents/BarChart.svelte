@@ -1,4 +1,7 @@
 <script>
+	export let data;
+	export let categories;
+	// let gradients = ;
 	import { onMount } from 'svelte';
 	onMount(async () => {
 		const ApexCharts = (await import('apexcharts')).default;
@@ -6,7 +9,7 @@
 			scaleLineColor: 'transparent',
 			series: [
 				{
-					data: [400, 430, 448, 470, 540, 580]
+					data: data
 				}
 			],
 			chart: {
@@ -22,14 +25,15 @@
 					horizontal: true
 				}
 			},
+
 			fill: {
-				type: 'gradient',
 				colors: ['#50F8F8'],
+				type: 'gradient',
 				gradient: {
 					shadeIntensity: 0.7,
 					opacityFrom: 0.5,
 					opacityTo: 0.9,
-					stops: [0, 90, 300]
+					stops: [0, 90, 270]
 				}
 			},
 			colors: [
@@ -78,7 +82,7 @@
 				enabled: false
 			},
 			xaxis: {
-				categories: ['South Korea', 'Canada', 'United Kingdom', 'Netherlands', 'Italy', 'France'],
+				categories: categories,
 
 				labels: {
 					show: false,

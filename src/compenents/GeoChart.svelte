@@ -1,4 +1,7 @@
 <script>
+	export let width;
+	export let height;
+	// export let lebar;
 	import { onMount } from 'svelte';
 	onMount(async () => {
 		google.charts.load('current', {
@@ -23,8 +26,8 @@
 				region: 'ID',
 				resolution: 'provinces',
 				legend: 'none',
-				width: '465',
-				height: '200'
+				width: width,
+				height: height
 			};
 			// var options = {};
 			// options['region'] = 'ID';
@@ -37,8 +40,9 @@
 
 			chart.draw(data, options);
 		}
+		console.log(width);
 	});
-
+	// console.log(lebar);
 	// var chart =
 </script>
 

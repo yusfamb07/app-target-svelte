@@ -65,7 +65,18 @@
 					<div class="card-body">
 						<h6>Pie Chart Request</h6>
 						<div class="mt-5">
-							<PieChart />
+							<PieChart
+								fillColor={['#D58407', '#17665D', '#1A4C7A', '#903C29', '#29907D']}
+								description={[
+									'ideologi',
+									'Politik',
+									'Ekonomi',
+									'Seni Budaya',
+									'Pertahanan dan Keamanan'
+								]}
+								series={[25, 15, 15, 25, 20]}
+								color={['#D58407', '#17665D', '#1A4C7A', '#903C29', '#29907D']}
+							/>
 						</div>
 					</div>
 				</div>
@@ -78,7 +89,16 @@
 							<h6>Binda Jakarta <img src="/down.png" alt="" /></h6>
 						</div>
 						<div class="mt-3">
-							<BarChart />
+							<BarChart
+								data={[600, 500, 400, 300, 200]}
+								categories={[
+									'ideologi',
+									'Politik',
+									'Ekonomi',
+									'Seni Budaya',
+									'Pertahanan & Keamanan'
+								]}
+							/>
 						</div>
 					</div>
 				</div>
