@@ -1,7 +1,7 @@
 <script>
 	export let data;
 	export let categories;
-	export let color,
+	export let color;
 	// let gradients = ;
 	import { onMount } from 'svelte';
 	onMount(async () => {
