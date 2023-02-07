@@ -1,6 +1,7 @@
 <script>
 	export let data;
 	export let categories;
+	export let color;
 	// let gradients = ;
 	import { onMount } from 'svelte';
 	onMount(async () => {
@@ -22,12 +23,16 @@
 			plotOptions: {
 				bar: {
 					borderRadius: 0,
-					horizontal: true
+					horizontal: true,
+					distributed: true
 				}
+			},
+			legend: {
+				show: false
 			},
 
 			fill: {
-				colors: ['#50F8F8'],
+				colors: color,
 				type: 'gradient',
 				gradient: {
 					shadeIntensity: 0.7,
@@ -71,7 +76,14 @@
 			},
 			xaxis: {
 				categories: categories,
-
+				axisTicks: {
+					show: false,
+					borderType: 'solid',
+					color: '#78909C',
+					height: 20,
+					offsetX: 0,
+					offsetY: 0
+				},
 				labels: {
 					show: false,
 					style: {
