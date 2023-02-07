@@ -22,12 +22,17 @@
 			plotOptions: {
 				bar: {
 					borderRadius: 0,
-					horizontal: true
+					horizontal: true,
+					distributed: true
 				}
+			},
+			legend: {
+				show: false
 			},
 
 			fill: {
-				colors: ['#50F8F8'],
+				// fillColor={['#EB8C87', '#D58407', '#17665D', '#1A4C7A', '#29907D']}
+				colors: ['#EB8C87', '#D58407', '#17665D', '#1A4C7A', '#29907D'],
 				type: 'gradient',
 				gradient: {
 					shadeIntensity: 0.7,
@@ -36,6 +41,7 @@
 					stops: [0, 90, 270]
 				}
 			},
+
 			grid: {
 				show: false,
 				borderColor: '#90A4AE',
