@@ -101,6 +101,7 @@
 									'Seni Budaya',
 									'Pertahanan & Keamanan'
 								]}
+								color={['#903C29', '#D58407', '#17665D', '#1A4C7A', '#29907D']}
 							/>
 						</div>
 					</div>
