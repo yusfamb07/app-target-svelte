@@ -77,7 +77,14 @@
 			},
 			xaxis: {
 				categories: categories,
-
+				axisTicks: {
+					show: false,
+					borderType: 'solid',
+					color: '#78909C',
+					height: 20,
+					offsetX: 0,
+					offsetY: 0
+				},
 				labels: {
 					show: false,
 					style: {
