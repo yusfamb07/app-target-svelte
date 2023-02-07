@@ -1,6 +1,7 @@
 <script>
 	export let data;
 	export let categories;
+	export let color,
 	// let gradients = ;
 	import { onMount } from 'svelte';
 	onMount(async () => {
@@ -31,8 +32,7 @@
 			},
 
 			fill: {
-				// fillColor={['#EB8C87', '#D58407', '#17665D', '#1A4C7A', '#29907D']}
-				colors: ['#EB8C87', '#D58407', '#17665D', '#1A4C7A', '#29907D'],
+				colors: color,
 				type: 'gradient',
 				gradient: {
 					shadeIntensity: 0.7,
