@@ -68,7 +68,7 @@
 							<PieChart
 								fillColor={['#D58407', '#17665D', '#1A4C7A', '#903C29', '#29907D']}
 								description={[
-									'ideologi',
+									'ideologii',
 									'Politik',
 									'Ekonomi',
 									'Seni Budaya',
@@ -98,6 +98,7 @@
 									'Seni Budaya',
 									'Pertahanan & Keamanan'
 								]}
+								color={['#903C29', '#D58407', '#17665D', '#1A4C7A', '#29907D']}
 							/>
 						</div>
 					</div>
