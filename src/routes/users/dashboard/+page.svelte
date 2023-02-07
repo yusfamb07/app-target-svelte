@@ -94,6 +94,7 @@
 							<BarChart
 								data={[600, 500, 400, 300, 200]}
 								categories={['South Korea', 'France', 'Japan', 'Italy', 'Canada']}
+								color={['#50F8F8']}
 							/>
 						</div>
 					</div>
