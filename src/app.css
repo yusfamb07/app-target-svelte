@@ -36,7 +36,7 @@ tr {
 .table-striped > tbody > tr:nth-of-type(odd) > * {
 	--bs-table-accent-bg: var(--bs-table-striped-bg);
 	color: #ffffff;
-	background-color: #272d34;
+	background-color: #2c333a;
 }
 
 .username {
@@ -123,7 +123,15 @@ tr {
 	background-color: #363d44;
 	border: 0px;
 	/* border: #21262b; */
-	border: 1px solid #fbfdff;
+	/* border: 1px solid #fbfdff; */
+	color: #fbfdff;
+}
+
+.modal-form-upload {
+	background-color: #363d44;
+	border: 0px;
+	/* border: #21262b; */
+	border: 1px solid #d4d4d4;
 	color: #fbfdff;
 }
 
@@ -144,6 +152,8 @@ textarea {
 
 .modal-form::placeholder {
 	color: #b3b5b6;
+	font-size: 14px;
+	font-family: myFirstFont;
 }
 
 .modal-input {
@@ -294,9 +304,19 @@ input[type='password'] {
 	background-color: #2a2e31;
 	color: #fff;
 	border: 0px;
-	font-size: 12px;
+	font-size: 14px;
 	font-family: myFirstFont;
 }
+
+.submit-btn {
+	border-radius: 0;
+	background-color: #2a2e31;
+	color: #fff;
+	border: 1px solid #5d6167;
+	font-size: 14px;
+	font-family: myFirstFont;
+}
+
 .modal-content {
 	border-radius: 0;
 	background-color: #1d2023;
@@ -315,9 +335,9 @@ input[type='password'] {
 }
 
 #rekaman {
-	border: 1px solid #fbfdff;
+	border: 1px solid rgba(251, 253, 255, 0.5);
 	height: 300px;
-	background-color: #292b2e;
+	background: #2c323a;
 }
 
 .btn-close:focus {
@@ -342,6 +362,7 @@ input[type='password'] {
 	border-radius: 0% !important;
 	height: 40px !important;
 	color: #fbfdff I !important;
+	border: 0px !important;
 }
 
 .svelte-2agpg7 > ul.selected > li {
@@ -367,12 +388,62 @@ div.dataTables_wrapper div.dataTables_info {
 	padding-top: 0.85em;
 	color: #fbfdff;
 	font-family: myFirstFont;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 div.dataTables_length select {
 	font-size: 12px;
-	/* background-color: blue !important; */
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+	margin-left: 0.5em;
+	display: inline-block;
+	width: 145px;
+}
+
+div.dataTables_wrapper div.dataTables_length label {
+	font-weight: normal;
+	text-align: left;
+	white-space: nowrap;
+	color: #fbfdff;
+	font-family: myFirstFont;
+	font-size: 12px;
+}
+
+div.dataTables_wrapper div.dataTables_filter label {
+	font-weight: normal;
+	white-space: nowrap;
+	text-align: left;
+	color: #fbfdff;
+	font-family: myFirstFont;
+	font-size: 12px;
+}
+
+.page-item:first-child .page-link {
+	border-top-left-radius: var(--bs-pagination-border-radius);
+	border-bottom-left-radius: var(--bs-pagination-border-radius);
+	font-size: 12px !important;
+	font-family: myFirstFont;
+}
+
+.pagination .page-item.active .page-link {
+	background-color: #292b2e;
+	border-color: #292b2e;
+	font-size: 12px !important;
+	font-family: myFirstFont;
+}
+
+.page-item:last-child .page-link {
+	border-top-right-radius: var(--bs-pagination-border-radius);
+	border-bottom-right-radius: var(--bs-pagination-border-radius);
+	font-size: 12px !important;
+	font-family: myFirstFont;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+	width: 60px;
+	display: inline-block;
+	font-size: 12px;
 }
 
 #regions_div {
@@ -416,24 +487,6 @@ div.dataTables_length select {
 	color: #fbfdff;
 }
 
-div.dataTables_wrapper div.dataTables_length label {
-	font-weight: normal;
-	text-align: left;
-	white-space: nowrap;
-	color: #fbfdff;
-	font-family: myFirstFont;
-	font-size: 14px;
-}
-
-div.dataTables_wrapper div.dataTables_filter label {
-	font-weight: normal;
-	white-space: nowrap;
-	text-align: left;
-	color: #fbfdff;
-	font-family: myFirstFont;
-	font-size: 14px;
-}
-
 .filter-form {
 	background-color: #1d2023;
 	border: 0%;
@@ -471,36 +524,3 @@ div.dataTables_wrapper div.dataTables_filter label {
 .date-time-picker.svelte-1f5dne5.svelte-1f5dne5 {
 	margin-left: -110px !important;
 }
-
-/* .nav-pills:focus {
-	background-color: #5d6167;
-	border: 1px solid #fbfdff;
-	border-radius: 0%;
-	color: #fbfdff;
-} */
-/* 
-audio::-webkit-media-controls-panel {
-	background-color: #2a2e31;
-	border-radius: 0%;
-}
-
-audio::-webkit-media-controls-play-button {
-	background-color: #636f7e;
-	border-radius: 50%;
-}
-
-audio::-webkit-media-controls-play-button:hover {
-	background-color: rgba(177, 212, 224, 0.7);
-}
-
-audio::-webkit-media-controls-current-time-display {
-	color: #fbfdff;
-	box-shadow: none;
-}
-
-audio::-webkit-media-controls-time-remaining-display {
-	color: #fbfdff;
-}
-audio::-webkit-media-controls-timeline {
-	color: #b1d4e0;
-} */

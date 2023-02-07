@@ -68,7 +68,17 @@
 					<div class="card-body">
 						<h6>Pie Chart Request</h6>
 						<div class="mt-5">
-							<PieChart test={'oketest'} />
+							<PieChart
+								fillColor={['#D58407', '#17665D', '#1A4C7A', '#903C29']}
+								description={[
+									'Lawful Interception Request',
+									'Geolocation Request',
+									'Telecomunication Request',
+									'All Pending Request'
+								]}
+								series={[25, 15, 15, 25]}
+								color={['#D58407', '#17665D', '#1A4C7A', '#903C29']}
+							/>
 						</div>
 					</div>
 				</div>
@@ -81,7 +91,10 @@
 							<h6>Lawful Interception Request <img src="/down.png" alt="" /></h6>
 						</div>
 						<div class="mt-3">
-							<BarChart />
+							<BarChart
+								data={[600, 500, 400, 300, 200]}
+								categories={['South Korea', 'France', 'Japan', 'Italy', 'Canada']}
+							/>
 						</div>
 					</div>
 				</div>

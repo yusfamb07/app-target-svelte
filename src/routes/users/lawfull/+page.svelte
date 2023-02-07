@@ -287,18 +287,23 @@
 							</div>
 							<div class="col-md-12 mb-3">
 								<p>Upload File</p>
-								<input class="form-control mb-3 modal-form" type="file" id="formFile" required />
+								<input
+									class="form-control mb-3 modal-form-upload"
+									type="file"
+									id="formFile"
+									required
+								/>
 							</div>
 						</div>
 					</div>
 					<div class="modal-footer">
 						<button
 							type="submit"
-							class="btn btn-secondary add-new"
+							class="btn btn-secondary submit-btn"
 							data-bs-toggle="modal"
 							data-bs-target="#FeedbackModal">Kirim Permohonan</button
 						>
-						<button type="button" class="btn btn-secondary add-new" data-bs-dismiss="modal"
+						<button type="button" class="btn btn-secondary submit-btn" data-bs-dismiss="modal"
 							>Batalkan</button
 						>
 					</div>
@@ -374,6 +379,15 @@
 								<p id="msisdn">0826371829192</p>
 							</div>
 							<div class="col-md-4">
+								<p>Tanggal Registrasi</p>
+							</div>
+							<div class="col-md-1">
+								<p>:</p>
+							</div>
+							<div class="col-md-6">
+								<p id="device">14/Oktober/2022</p>
+							</div>
+							<div class="col-md-4">
 								<p>Device</p>
 							</div>
 							<div class="col-md-1">
@@ -413,11 +427,11 @@
 					<div class="modal-footer">
 						<button
 							type="submit"
-							class="btn btn-secondary add-new"
+							class="btn btn-secondary submit-btn"
 							data-bs-toggle="modal"
 							data-bs-target="#FeedbackModal">Simpan Laporan</button
 						>
-						<button type="button" class="btn btn-secondary add-new" data-bs-dismiss="modal"
+						<button type="button" class="btn btn-secondary submit-btn" data-bs-dismiss="modal"
 							>Batalkan</button
 						>
 					</div>

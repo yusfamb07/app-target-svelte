@@ -160,15 +160,8 @@
 							</div>
 							<div class="col-md-3">
 								<div class="d-flex align-items-center">
-									<p class="mt-2">Filter</p>
-									<!-- <input
-										class="filter-form"
-										type="text"
-										name=""
-										id="datetimepicker9"
-										placeholder="2022"
-									/> -->
-									<div>
+									<div class="d-flex align-items-center gap-2">
+										<p class="mt-3 ">Filter</p>
 										<DateInput format="yyyy" placeholder="2023" class="filter-form" />
 									</div>
 								</div>
@@ -291,18 +284,23 @@
 							</div>
 							<div class="col-md-12 mb-3">
 								<p>Upload File</p>
-								<input class="form-control mb-3 modal-form" type="file" id="formFile" required />
+								<input
+									class="form-control mb-3 modal-form-upload"
+									type="file"
+									id="formFile"
+									required
+								/>
 							</div>
 						</div>
 					</div>
 					<div class="modal-footer">
 						<button
 							type="submit"
-							class="btn btn-secondary add-new"
+							class="btn btn-secondary submit-btn"
 							data-bs-toggle="modal"
 							data-bs-target="#FeedbackModal">Kirim Permohonan</button
 						>
-						<button type="button" class="btn btn-secondary add-new" data-bs-dismiss="modal"
+						<button type="button" class="btn btn-secondary submit-btn" data-bs-dismiss="modal"
 							>Batalkan</button
 						>
 					</div>
@@ -425,18 +423,18 @@
 								</div>
 							</div>
 							<div class="col-md-12">
-								<GeoChart />
+								<GeoChart width="465" height="215" />
 							</div>
 						</div>
 					</div>
 					<div class="modal-footer">
 						<button
 							type="submit"
-							class="btn btn-secondary add-new"
+							class="btn btn-secondary submit-btn"
 							data-bs-toggle="modal"
 							data-bs-target="#FeedbackModal">Simpan Laporan</button
 						>
-						<button type="button" class="btn btn-secondary add-new" data-bs-dismiss="modal"
+						<button type="button" class="btn btn-secondary submit-btn" data-bs-dismiss="modal"
 							>Batalkan</button
 						>
 					</div>

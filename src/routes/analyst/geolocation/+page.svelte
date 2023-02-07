@@ -4,6 +4,7 @@
 	import LineChart from '../../../compenents/LineChart.svelte';
 	import { onMount } from 'svelte';
 	import MultiSelect from 'svelte-multiselect';
+	import Navbar from '../../../compenents/Navbar.svelte';
 
 	const ui_libs = [`Svelte`, `React`, `Vue`, `Angular`, `...`];
 
@@ -19,6 +20,8 @@
 	// 	new select2('#notelepon');
 	// });
 </script>
+
+<Navbar />
 
 <div class="konten">
 	<div class="container-fluid mt-3">
