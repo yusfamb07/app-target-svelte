@@ -66,6 +66,7 @@ tr {
 
 .bg {
 	background-image: url('/background.png');
+	/* height: 193vh; */
 	height: 193vh;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -171,7 +172,12 @@ textarea {
 	border: 1px solid #5d6167;
 }
 
-input[type='password'] {
+/* input[type='password'] {
+	font-size: 30px;
+	text-align: center;
+} */
+
+.inputPassword {
 	font-size: 30px;
 	text-align: center;
 }
@@ -251,13 +257,15 @@ input[type='password'] {
 .konten {
 	margin-left: 250px;
 }
+
 .card-login {
 	/* box-sizing: border-box; */
 	position: absolute;
 	width: 448px;
 	height: 500px;
-	left: 496px;
-	top: 100px;
+	left: 400px;
+	top: 70px;
+	/* margin: 10rem 10rem 10rem 20rem; */
 	background: #1d2023;
 	opacity: 0.93;
 	border: 0px solid #8994a5;
@@ -268,7 +276,7 @@ input[type='password'] {
 .card {
 	box-sizing: border-box;
 	/* width: 190px;
-  height: 174px; */
+  	height: 174px; */
 	/* height: 500px; */
 	/* left: 277px; */
 	background: rgba(49, 56, 64, 0.5);

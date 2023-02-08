@@ -16,10 +16,30 @@
 					Kode Verifikasi Akses Sistem Di Kirim ke Email Anda. Silahkan Cek Kotak Masuk Email Anda !
 				</p>
 				<div class="d-flex gap-3">
-					<input type="password" class="form-control mt-5" id="kata_sandi" maxlength="1" />
-					<input type="password" class="form-control mt-5" id="kata_sandi" maxlength="1" />
-					<input type="password" class="form-control mt-5" id="kata_sandi" maxlength="1" />
-					<input type="password" class="form-control mt-5" id="kata_sandi" maxlength="1" />
+					<input
+						type="password"
+						class="form-control inputPassword mt-5"
+						id="kata_sandi"
+						maxlength="1"
+					/>
+					<input
+						type="password"
+						class="form-control inputPassword mt-5"
+						id="kata_sandi"
+						maxlength="1"
+					/>
+					<input
+						type="password"
+						class="form-control inputPassword mt-5"
+						id="kata_sandi"
+						maxlength="1"
+					/>
+					<input
+						type="password"
+						class="form-control inputPassword mt-5"
+						id="kata_sandi"
+						maxlength="1"
+					/>
 				</div>
 				<p class="mt-2">Belum mendapatkan kode ? Kirim Ulang</p>
 				<button

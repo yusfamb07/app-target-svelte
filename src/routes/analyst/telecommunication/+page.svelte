@@ -55,14 +55,7 @@
 									<td>6287982920129</td>
 									<td>Deskripsi</td>
 									<td>Nama File</td>
-									<td>
-										<a
-											href="#!"
-											data-bs-toggle="modal"
-											data-bs-target="#DetailModal"
-											style="color: #219386;">Disetujui</a
-										>
-									</td>
+									<td style="color: #219386;">Disetujui </td>
 									<td>
 										<span
 											class="detail-container"
@@ -81,14 +74,7 @@
 									<td>6287982920129</td>
 									<td>Deskripsi</td>
 									<td>Nama File</td>
-									<td>
-										<a
-											href="#!"
-											data-bs-toggle="modal"
-											data-bs-target="#DetailModal"
-											style="color: #932121;">Tidak Disetujui</a
-										>
-									</td>
+									<td style="color: #932121;">Tidak Disetujui </td>
 									<td>
 										<span
 											class="detail-container"
@@ -105,14 +91,7 @@
 									<td>6287982920129</td>
 									<td>Deskripsi</td>
 									<td>Nama File</td>
-									<td>
-										<a
-											href="#!"
-											data-bs-toggle="modal"
-											data-bs-target="#DetailModal"
-											style="color: #839321;">Pending</a
-										>
-									</td>
+									<td style="color: #839321;">Pending </td>
 									<td>
 										<span
 											class="detail-container"
@@ -129,14 +108,7 @@
 									<td>6287982920129</td>
 									<td>Deskripsi</td>
 									<td>Nama File</td>
-									<td>
-										<a
-											href="#!"
-											data-bs-toggle="modal"
-											data-bs-target="#DetailModal"
-											style="color: #219386;">Disetujui</a
-										>
-									</td>
+									<td style="color: #219386;">Disetujui </td>
 									<td>
 										<span
 											class="detail-container"
@@ -153,14 +125,7 @@
 									<td>6287982920129</td>
 									<td>Deskripsi</td>
 									<td>Nama File</td>
-									<td>
-										<a
-											href="#!"
-											data-bs-toggle="modal"
-											data-bs-target="#DetailModal"
-											style="color: #219386;">Disetujui</a
-										>
-									</td>
+									<td style="color: #219386;">Disetujui </td>
 									<td>
 										<span
 											class="detail-container"
@@ -177,14 +142,7 @@
 									<td>6287982920129</td>
 									<td>Deskripsi</td>
 									<td>Nama File</td>
-									<td>
-										<a
-											href="#!"
-											data-bs-toggle="modal"
-											data-bs-target="#DetailModal"
-											style="color: #219386;">Disetujui</a
-										>
-									</td>
+									<td style="color: #219386;">Disetujui </td>
 									<td>
 										<span
 											class="detail-container"
@@ -559,7 +517,7 @@
 						</div>
 						<div class="cols-md-12 mt-3">
 							<p class="mb-3">Nomor Telepon</p>
-							<div class="d-flex cols-md-12 card-number-container">
+							<div class="d-flex justify-content-between">
 								<div class="card-number">
 									<div class="number-container">
 										<p class="fw-bold">Nomor</p>
@@ -687,127 +645,33 @@
 									<p>History Location</p>
 
 									<div class="update-container">
-										<table
-											id="lawfulllist"
-											class="table table-striped mb-6 mt-6"
-											style="width:100%"
-										>
+										<table id="" class="table table-striped mb-3 mt-3" style="width:100%">
 											<thead>
 												<tr>
-													<th>No</th>
-													<th>No Surat</th>
-													<th>Urgensi</th>
-													<th>No Telepon</th>
-													<th>Deskripsi</th>
-													<th>File</th>
-													<th>Status</th>
-													<th>Aksi</th>
+													<th>Waktu</th>
+													<th>Lokasi</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
-													<td>1</td>
-													<td>SRT/123/123/123</td>
-													<td>Nama Urgensi</td>
-													<td>6287982920129</td>
-													<td>Deskripsi</td>
-													<td>Nama File</td>
-													<td style="color: #219386;">Disetujui </td>
-													<td>
-														<span
-															class="detail-container"
-															data-bs-toggle="modal"
-															data-bs-target="#DetailModal1"
-														>
-															<img src="/icon.detail.svg" alt="icon detail" />
-															<p>Detail</p>
-														</span></td
+													<td>12/12/2022 20:00</td>
+													<td
+														>Jl. Kirai, Cipete Utara, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah
+														Khusus Ibukota Jakarta</td
 													>
 												</tr>
 												<tr>
-													<td>1</td>
-													<td>SRT/123/123/123</td>
-													<td>Nama Urgensi</td>
-													<td>6287982920129</td>
-													<td>Deskripsi</td>
-													<td>Nama File</td>
-													<td style="color: #932121;">Tidak Disetujui </td>
-													<td>
-														<span
-															class="detail-container"
-															data-bs-toggle="modal"
-															data-bs-target="#DetailModal1"
-															><img src="/icon.detail.svg" alt="icon detail" />
-															<p>Detail</p></span
-														></td
+													<td>12/12/2022 20:00</td>
+													<td
+														>Jl. Kirai, Cipete Utara, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah
+														Khusus Ibukota Jakarta</td
 													>
-												</tr><tr>
-													<td>1</td>
-													<td>SRT/123/123/123</td>
-													<td>Nama Urgensi</td>
-													<td>6287982920129</td>
-													<td>Deskripsi</td>
-													<td>Nama File</td>
-													<td style="color: #839321;">Pending </td>
-													<td>
-														<span
-															class="detail-container"
-															data-bs-toggle="modal"
-															data-bs-target="#DetailModal1"
-															><img src="/icon.detail.svg" alt="icon detail" />
-															<p>Detail</p></span
-														></td
-													>
-												</tr><tr>
-													<td>1</td>
-													<td>SRT/123/123/123</td>
-													<td>Nama Urgensi</td>
-													<td>6287982920129</td>
-													<td>Deskripsi</td>
-													<td>Nama File</td>
-													<td style="color: #219386;">Disetujui </td>
-													<td>
-														<span
-															class="detail-container"
-															data-bs-toggle="modal"
-															data-bs-target="#DetailModal1"
-															><img src="/icon.detail.svg" alt="icon detail" />
-															<p>Detail</p></span
-														></td
-													>
-												</tr><tr>
-													<td>1</td>
-													<td>SRT/123/123/123</td>
-													<td>Nama Urgensi</td>
-													<td>6287982920129</td>
-													<td>Deskripsi</td>
-													<td>Nama File</td>
-													<td style="color: #219386;">Disetujui </td>
-													<td>
-														<span
-															class="detail-container"
-															data-bs-toggle="modal"
-															data-bs-target="#DetailModal1"
-															><img src="/icon.detail.svg" alt="icon detail" />
-															<p>Detail</p></span
-														></td
-													>
-												</tr><tr>
-													<td>1</td>
-													<td>SRT/123/123/123</td>
-													<td>Nama Urgensi</td>
-													<td>6287982920129</td>
-													<td>Deskripsi</td>
-													<td>Nama File</td>
-													<td style="color: #219386;">Disetujui </td>
-													<td>
-														<span
-															class="detail-container"
-															data-bs-toggle="modal"
-															data-bs-target="#DetailModal1"
-															><img src="/icon.detail.svg" alt="icon detail" />
-															<p>Detail</p></span
-														></td
+												</tr>
+												<tr>
+													<td>12/12/2022 20:00</td>
+													<td
+														>Jl. Kirai, Cipete Utara, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah
+														Khusus Ibukota Jakarta</td
 													>
 												</tr>
 											</tbody>

@@ -516,7 +516,7 @@
 						</div>
 						<div class="cols-md-12 mt-3">
 							<p class="mb-3">Nomor Telepon</p>
-							<div class="d-flex cols-md-12 card-number-container">
+							<div class="d-flex justify-content-between">
 								<div class="card-number">
 									<div class="number-container">
 										<p class="fw-bold">Nomor</p>
@@ -651,7 +651,7 @@
 									</div>
 									<div class="update-container">
 										<p style="color:#fbfdff">Update MSISDN</p>
-										<table id="msisdnList" class="table table-striped mb-3 mt-3" style="width:100%">
+										<table id="" class="table table-striped mb-3 mt-3" style="width:100%">
 											<thead>
 												<tr>
 													<th>No</th>

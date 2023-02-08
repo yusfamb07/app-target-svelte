@@ -1,3 +1,11 @@
+<script>
+	let showPassword = true;
+	function togglePassword() {
+		showPassword = !showPassword;
+	}
+	let password = '';
+</script>
+
 <div class="bg">
 	<div class="card-login">
 		<div class="card-body">
@@ -15,7 +23,31 @@
 				<p>Professionally recaptiualize long-term high-impact process improvements.</p>
 				<p class="p-login">Login</p>
 				<p class="mt-3">Kata Sandi</p>
-				<input type="text" class="form-control" id="kata_sandi" placeholder="Masukan Kata Sandi" />
+				{#if showPassword}
+					<input
+						type="password"
+						class="form-control"
+						placeholder="Password"
+						bind:value={password}
+						id="inputPassword"
+					/>
+				{:else}
+					<input
+						type="text"
+						class="form-control"
+						placeholder="Password"
+						bind:value={password}
+						id="inputPassword"
+					/>
+				{/if}
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<img
+					src={showPassword ? '/show.png' : '/hide.png'}
+					id="img"
+					alt={showPassword ? 'show' : 'hide'}
+					style="position: absolute; top: 49%; left: 85%; cursor: pointer; width: 20px"
+					on:click={togglePassword}
+				/>
 				<button
 					type="button"
 					class="btn btn-secondary button-next mt-5 w-100 p-1"

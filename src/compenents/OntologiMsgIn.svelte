@@ -2,14 +2,40 @@
 	import { onMount } from 'svelte';
 	onMount(async () => {
 		// create an array with nodes
-		var nodes = new vis.DataSet([{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }]);
+		var nodes = new vis.DataSet([
+			{
+				id: 1,
+				label: '(+33)7 75 55 45 48 (12 Pesan) ',
+				font: { size: 12, color: '#E6D32F', face: 'Chakra Petch' }
+			},
+			{
+				id: 2,
+				label: '(+33)6 55 53 19 16 (12 Pesan)',
+				font: { size: 12, color: '#FBFDFF', face: 'Chakra Petch' }
+			},
+			{
+				id: 3,
+				label: '(+33)6 55 53 19 16 (12 Pesan)',
+				font: { size: 12, color: '#FBFDFF', face: 'Chakra Petch' }
+			},
+			{
+				id: 4,
+				label: '(+33)6 55 53 19 16 (12 Pesan)',
+				font: { size: 12, color: '#FBFDFF', face: 'Chakra Petch' }
+			},
+			{
+				id: 5,
+				label: '(+33)6 55 53 19 16 (12 Pesan)',
+				font: { size: 12, color: '#FBFDFF', face: 'Chakra Petch' }
+			}
+		]);
 
 		// create an array with edges
 		var edges = new vis.DataSet([
 			{ from: 1, to: 3 },
-			{ from: 1, to: 2 },
-			{ from: 2, to: 4 },
-			{ from: 2, to: 5 }
+			{ from: 2, to: 3 },
+			{ from: 4, to: 3 },
+			{ from: 5, to: 3 }
 		]);
 
 		// create a network
@@ -20,7 +46,21 @@
 			nodes: nodes,
 			edges: edges
 		};
-		var options = {};
+		var options = {
+			nodes: {
+				shape: 'dot',
+				size: 12,
+				borderWidth: 1,
+				color: {
+					background: '#812B36',
+					border: '#A53644',
+					highlight: {
+						border: '#2B7CE9',
+						background: '#D2E5FF'
+					}
+				}
+			}
+		};
 
 		// initialize your network!
 		var network = new vis.Network(container, data, options);

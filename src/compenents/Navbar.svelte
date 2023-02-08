@@ -1,24 +1,26 @@
 <script>
 	import NavLink from './NavLink.svelte';
 	import icon from '../lib/dashboard.svg';
+	import { onMount } from 'svelte';
+
 	import { page } from '$app/stores';
-	// let path;
+	$page.url.pathname;
 
-	// function getPath(currentPath) {
-	// 	path = currentPath;
-	// 	console.log(path);
-	// }
+	// onMount(() => (url = window.location.pathname));
+	let path;
 
-	// $: getPath($page.url.pathname);
+	function getPath() {
+		path = 'users/';
+		console.log(path);
+	}
+
+	$: getPath($page.url.pathname);
 </script>
 
 <nav class="navbar navbar navbar-expand-lg navbar-dark bg-dark">
 	<div class="container-fluid">
 		<a class="navbar-brand" />
-		<!-- <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> -->
+
 		<div class="d-flex align-items-center gap-3">
 			<img src="/notification.svg" alt="" />
 			<img src="/profile.png" class="mr-5" alt="" />
@@ -40,42 +42,79 @@
 				</div>
 			</div>
 		</div>
-
-		<li
-			class="list-group-item bg-dark"
-			class:active={$page.url.pathname.includes('/users/dashboard')}
-		>
-			<a class="text-white" id="txt-link" href="/users/dashboard"
-				><img class="icon p-1" src="/dashboard.svg" alt="" />Dashboard Approval Target</a
+		{#if $page.url.pathname.includes('/users/')}
+			<li
+				class="list-group-item bg-dark"
+				class:active={$page.url.pathname.includes('/users/dashboard')}
 			>
-		</li>
+				<a class="text-white" id="txt-link" href="/users/dashboard"
+					><img class="icon p-1" src="/dashboard.svg" alt="" />Dashboard Approval Target</a
+				>
+			</li>
 
-		<li
-			class="list-group-item bg-dark"
-			class:active={$page.url.pathname.includes('/users/lawfull')}
-		>
-			<a class="text-white" id="txt-link" href="/users/lawfull"
-				><img class="icon p-1" src="/lawfull.svg" alt="" /> Lawful Interception Request</a
+			<li
+				class="list-group-item bg-dark"
+				class:active={$page.url.pathname.includes('/users/lawfull')}
 			>
-		</li>
+				<a class="text-white" id="txt-link" href="/users/lawfull"
+					><img class="icon p-1" src="/lawfull.svg" alt="" /> Lawful Interception Request</a
+				>
+			</li>
 
-		<li
-			class="list-group-item bg-dark"
-			class:active={$page.url.pathname.includes('/users/geolocation')}
-		>
-			<a class="text-white" id="txt-link" href="/users/geolocation"
-				><img class="icon p-1" src="/geo.svg" alt="" /> Geolocation Request</a
+			<li
+				class="list-group-item bg-dark"
+				class:active={$page.url.pathname.includes('/users/geolocation')}
 			>
-		</li>
+				<a class="text-white" id="txt-link" href="/users/geolocation"
+					><img class="icon p-1" src="/geo.svg" alt="" /> Geolocation Request</a
+				>
+			</li>
 
-		<li
-			class="list-group-item bg-dark"
-			class:active={$page.url.pathname.includes('/users/telecomunication')}
-		>
-			<a class="text-white" id="txt-link" href="/users/telecomunication"
-				><img class="icon p-1" src="/tele.svg" alt="" /> Telecomunication Request</a
+			<li
+				class="list-group-item bg-dark"
+				class:active={$page.url.pathname.includes('/users/telecomunication')}
 			>
-		</li>
+				<a class="text-white" id="txt-link" href="/users/telecomunication"
+					><img class="icon p-1" src="/tele.svg" alt="" /> Telecomunication Request</a
+				>
+			</li>
+		{:else}
+			<li
+				class="list-group-item bg-dark"
+				class:active={$page.url.pathname.includes('/analyst/dashboard')}
+			>
+				<a class="text-white" id="txt-link" href="/analyst/dashboard"
+					><img class="icon p-1" src="/dashboard.svg" alt="" />Dashboard Analyst</a
+				>
+			</li>
+
+			<li
+				class="list-group-item bg-dark"
+				class:active={$page.url.pathname.includes('/analyst/lawfull')}
+			>
+				<a class="text-white" id="txt-link" href="/analyst/lawfull"
+					><img class="icon p-1" src="/lawfull.svg" alt="" /> Lawful Interception Request</a
+				>
+			</li>
+
+			<li
+				class="list-group-item bg-dark"
+				class:active={$page.url.pathname.includes('/analyst/geolocation')}
+			>
+				<a class="text-white" id="txt-link" href="/analyst/geolocation"
+					><img class="icon p-1" src="/geo.svg" alt="" /> Geolocation Request</a
+				>
+			</li>
+
+			<li
+				class="list-group-item bg-dark"
+				class:active={$page.url.pathname.includes('/analyst/telecommunication')}
+			>
+				<a class="text-white" id="txt-link" href="/analyst/telecommunication"
+					><img class="icon p-1" src="/tele.svg" alt="" /> Telecomunication Request</a
+				>
+			</li>
+		{/if}
 	</ul>
 	<!-- <div class="sidebar-heading border-bottom bg-dark">Start Bootstrap</div> -->
 </div>
