@@ -151,7 +151,7 @@ textarea {
 }
 
 .modal-form::placeholder {
-	color: #b3b5b6;
+	color: #fbfdff;
 	font-size: 14px;
 	font-family: myFirstFont;
 }
