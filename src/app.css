@@ -524,3 +524,12 @@ div.dataTables_wrapper div.dataTables_length select {
 .date-time-picker.svelte-1f5dne5.svelte-1f5dne5 {
 	margin-left: -110px !important;
 }
+.flatpickr {
+	padding: 4px 4px;
+	font-size: 12px;
+	border: none;
+	text-align: center;
+}
+.flatpickr:focus {
+	color: #fbfdff;
+}

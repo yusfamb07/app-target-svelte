@@ -5,7 +5,8 @@
 	import { onMount } from 'svelte';
 	import MultiSelect from 'svelte-multiselect';
 	import Navbar from '../../../compenents/Navbar.svelte';
-
+	import Flatpickr from 'svelte-flatpickr';
+	import 'flatpickr/dist/flatpickr.css';
 	const ui_libs = [`Svelte`, `React`, `Vue`, `Angular`, `...`];
 
 	let selected = [];
@@ -163,7 +164,23 @@
 					<div class="card-body">
 						<div class="d-flex justify-content-between">
 							<h6>Request Statistics</h6>
-							<input type="date" name="tahun" id="" />
+							<Flatpickr
+								options={{
+									altInput: true,
+									altFormat: 'Y',
+									dateFormat: 'Y-m-d'
+									// plugins: [
+									// 	new monthSelectPlugin({
+									// 		shorthand: true, //defaults to false
+									// 		dateFormat: 'm.y', //defaults to "F Y"
+									// 		altFormat: 'F Y', //defaults to "F Y"
+									// 		theme: 'dark' // defaults to "light"
+									// 	})
+									// ]
+								}}
+								id="flatpickr"
+								class="filter-form flatpickr"
+							/>
 						</div>
 						<div class="mt-3">
 							<LineChart />

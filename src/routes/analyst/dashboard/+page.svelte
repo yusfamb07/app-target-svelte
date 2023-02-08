@@ -3,7 +3,12 @@
 	import BarChart from '../../../compenents/BarChart.svelte';
 	import { onMount } from 'svelte';
 	import Navbar from '../../../compenents/Navbar.svelte';
+	import Flatpickr from 'svelte-flatpickr';
+	import 'flatpickr/dist/flatpickr.css';
+	import monthSelectPlugin from 'flatpickr/dist/plugins/monthSelect';
+	import { DateInput } from 'date-picker-svelte';
 
+	const options = {};
 	onMount(async () => {
 		new DataTable('#requestlist');
 	});
@@ -117,9 +122,26 @@
 							<h6>Request List</h6>
 							<div class="d-flex ">
 								<form action="" class="date-container">
-									<input type="date" name="" id="" />
+									<Flatpickr
+										options={{
+											altInput: true,
+											altFormat: 'd F Y',
+											dateFormat: 'Y-m-d'
+											// plugins: [
+											// 	new monthSelectPlugin({
+											// 		shorthand: true, //defaults to false
+											// 		dateFormat: 'm.y', //defaults to "F Y"
+											// 		altFormat: 'F Y', //defaults to "F Y"
+											// 		theme: 'dark' // defaults to "light"
+											// 	})
+											// ]
+										}}
+										id="flatpickr"
+										class="filter-form flatpickr"
+									/>
+									<!-- <input type="date" name="" id="" /> -->
 									<p>To</p>
-									<input type="date" name="" id="" />
+									<DateInput format="MM-yyyy" placeholder="Januari 2023" class="filter-form" />
 								</form>
 							</div>
 						</div>
@@ -206,10 +228,10 @@
 		display: flex;
 		gap: 1rem;
 	}
-	input[type='date'] {
+	/* input[type='date'] {
 		background: #23282e;
 		border-right: none;
 		border-left: none;
 		color: #fbfdff;
-	}
+	} */
 </style>
