@@ -180,7 +180,25 @@
 					<div class="card-body">
 						<div class="d-flex justify-content-between">
 							<h6>Most Request by Binda</h6>
-							<h6>Geolocation Request <img src="/down.png" alt="" /></h6>
+							<div class="dropdown">
+								<a
+									style="color: #fbfdff; 	text-decoration: none; font-family: myFirstFont; font-size: 14px; "
+									class="dropdown-toggle"
+									href="#!"
+									role="button"
+									id="dropdownMenuLink"
+									data-bs-toggle="dropdown"
+									aria-expanded="false"
+								>
+									Geolocation Request
+								</a>
+
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<li><a class="dropdown-item" href="#!">Lawful Interception Request</a></li>
+									<li><a class="dropdown-item" href="#!">Geolocation Request</a></li>
+									<li><a class="dropdown-item" href="#!">Telecomunication Request</a></li>
+								</ul>
+							</div>
 						</div>
 						<div class="mt-5">
 							<PieChartBinda />
