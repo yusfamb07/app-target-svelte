@@ -69,7 +69,7 @@
 						<h6>Pie Chart Request</h6>
 						<div class="mt-5">
 							<PieChart
-								fillColor={['#D58407', '#17665D', '#1A4C7A', '#903C29', '#29907D']}
+								fillColor={['#903C29', '#D58407', '#17665D', '#1A4C7A', '#29907D']}
 								description={[
 									'ideologii',
 									'Politik',
@@ -78,7 +78,7 @@
 									'Pertahanan dan Keamanan'
 								]}
 								series={[25, 15, 15, 25, 20]}
-								color={['#D58407', '#17665D', '#1A4C7A', '#903C29', '#29907D']}
+								color={['#903C29', '#D58407', '#17665D', '#1A4C7A', '#29907D']}
 							/>
 						</div>
 					</div>
