@@ -32,7 +32,6 @@
 						<div class="d-flex justify-content-between mb-3">
 							<h6>Request List (Telecomunication)</h6>
 						</div>
-
 						<table id="lawfulllist" class="table table-striped mb-6 mt-6" style="width:100%">
 							<thead>
 								<tr>
@@ -54,14 +53,7 @@
 									<td>6287982920129</td>
 									<td>Deskripsi</td>
 									<td>Nama File</td>
-									<td>
-										<a
-											href="#!"
-											data-bs-toggle="modal"
-											data-bs-target="#DetailModal"
-											style="color: #219386;">Disetujui</a
-										>
-									</td>
+									<td style="color: #219386;">Disetujui </td>
 									<td>
 										<span
 											class="detail-container"
@@ -80,14 +72,7 @@
 									<td>6287982920129</td>
 									<td>Deskripsi</td>
 									<td>Nama File</td>
-									<td>
-										<a
-											href="#!"
-											data-bs-toggle="modal"
-											data-bs-target="#DetailModal"
-											style="color: #932121;">Tidak Disetujui</a
-										>
-									</td>
+									<td style="color: #932121;">Tidak Disetujui </td>
 									<td>
 										<span
 											class="detail-container"
@@ -104,14 +89,7 @@
 									<td>6287982920129</td>
 									<td>Deskripsi</td>
 									<td>Nama File</td>
-									<td>
-										<a
-											href="#!"
-											data-bs-toggle="modal"
-											data-bs-target="#DetailModal"
-											style="color: #839321;">Pending</a
-										>
-									</td>
+									<td style="color: #839321;">Pending </td>
 									<td>
 										<span
 											class="detail-container"
@@ -128,14 +106,7 @@
 									<td>6287982920129</td>
 									<td>Deskripsi</td>
 									<td>Nama File</td>
-									<td>
-										<a
-											href="#!"
-											data-bs-toggle="modal"
-											data-bs-target="#DetailModal"
-											style="color: #219386;">Disetujui</a
-										>
-									</td>
+									<td style="color: #219386;">Disetujui </td>
 									<td>
 										<span
 											class="detail-container"
@@ -152,14 +123,7 @@
 									<td>6287982920129</td>
 									<td>Deskripsi</td>
 									<td>Nama File</td>
-									<td>
-										<a
-											href="#!"
-											data-bs-toggle="modal"
-											data-bs-target="#DetailModal"
-											style="color: #219386;">Disetujui</a
-										>
-									</td>
+									<td style="color: #219386;">Disetujui </td>
 									<td>
 										<span
 											class="detail-container"
@@ -176,14 +140,7 @@
 									<td>6287982920129</td>
 									<td>Deskripsi</td>
 									<td>Nama File</td>
-									<td>
-										<a
-											href="#!"
-											data-bs-toggle="modal"
-											data-bs-target="#DetailModal"
-											style="color: #219386;">Disetujui</a
-										>
-									</td>
+									<td style="color: #219386;">Disetujui </td>
 									<td>
 										<span
 											class="detail-container"
@@ -482,7 +439,7 @@
 						/>
 					</div>
 					<div class="modal-body">
-						<div class="row">
+						<div class="row mt-2">
 							<div class="col-md-12">
 								<h6 class="font-weight-bold">Informasi Permintaan</h6>
 							</div>
@@ -663,7 +620,7 @@
 								<h6 class="font-weight-bold">Informasi Peta</h6>
 							</div>
 							<div class="col-md-12 geo-container">
-								<GeoChart width="856" height="315" />
+								<GeoChart width="835" height="315" />
 							</div>
 							<div class="col-md-12 d-flex column-gap-3 last-location-container">
 								<div class="last-location">
@@ -787,14 +744,14 @@
 		/* margin: 0; */
 	}
 	.modal-content {
-		padding: 2rem 1.813rem 1.44rem 2.5rem;
-		margin: 4rem 0 0 -16.5rem;
+		padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+		margin: 3rem 0 0 -11rem;
 		height: 48.563rem;
 		width: 58.12rem;
 	}
 	.modal-header {
-		padding-bottom: 0;
-		margin-bottom: 1.3rem;
+		/* padding-bottom: 0; */
+		/* margin-bottom: 1.3rem; */
 	}
 	.modal-body {
 		font-size: 1rem;
@@ -910,6 +867,7 @@
 		border-style: solid;
 		border-color: #404952;
 		padding: 1.25rem 0.625rem;
+		height: 32rem;
 	}
 	.tag-container {
 		color: #fbfdff;
@@ -918,12 +876,13 @@
 		font-size: 0.875rem;
 	}
 	.outer-tag-container {
-		height: 14.25rem;
+		height: 32rem;
 		background: #282f36;
 		border-width: 1px 0px;
 		border-style: solid;
 		border-color: #404952;
-		overflow: scroll;
+		overflow-x: hidden;
+		overflow-y: scroll;
 	}
 	.inner-contact p {
 		color: #fbfdff;
@@ -949,7 +908,7 @@
 		border-color: #404952;
 	}
 	.tarea-note {
-		resize: none;
+		width: 810px;
 		margin-bottom: 2.13rem;
 	}
 	.save-button {

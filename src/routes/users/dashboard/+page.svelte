@@ -4,6 +4,7 @@
 	import { onMount } from 'svelte';
 	import { DateInput } from 'date-picker-svelte';
 	import Navbar from '../../../compenents/Navbar.svelte';
+	import { DatePicker, Space } from 'antd';
 
 	onMount(async () => {
 		new DataTable('#requestlist');
@@ -94,7 +95,7 @@
 							<BarChart
 								data={[600, 500, 400, 300, 200]}
 								categories={['South Korea', 'France', 'Japan', 'Italy', 'Canada']}
-								color={['#50F8F8']}
+								color={['#903C29', '#D58407', '#17665D', '#1A4C7A', '#29907D']}
 							/>
 						</div>
 					</div>

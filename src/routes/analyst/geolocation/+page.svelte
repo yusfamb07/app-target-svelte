@@ -663,40 +663,134 @@
 								<h6 class="font-weight-bold">Informasi Peta</h6>
 							</div>
 							<div class="col-md-12 geo-container">
-								<GeoChart width="856" height="315" />
+								<GeoChart width="835" height="315" />
 							</div>
 							<div class="col-md-12 d-flex column-gap-3 last-location-container">
 								<div class="last-location">
 									<p>History Location</p>
 
 									<div class="update-container">
-										<table id="msisdnList" class="table table-striped mb-3 mt-3" style="width:100%">
+										<table
+											id="lawfulllist"
+											class="table table-striped mb-6 mt-6"
+											style="width:100%"
+										>
 											<thead>
 												<tr>
-													<th>Waktu</th>
-													<th>Location</th>
+													<th>No</th>
+													<th>No Surat</th>
+													<th>Urgensi</th>
+													<th>No Telepon</th>
+													<th>Deskripsi</th>
+													<th>File</th>
+													<th>Status</th>
+													<th>Aksi</th>
 												</tr>
 											</thead>
 											<tbody>
 												<tr>
-													<td>12/12/2022 20:00</td>
-													<td
-														>Jl. Kirai, Cipete Utara, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah
-														Khusus Ibukota Jakarta</td
+													<td>1</td>
+													<td>SRT/123/123/123</td>
+													<td>Nama Urgensi</td>
+													<td>6287982920129</td>
+													<td>Deskripsi</td>
+													<td>Nama File</td>
+													<td style="color: #219386;">Disetujui </td>
+													<td>
+														<span
+															class="detail-container"
+															data-bs-toggle="modal"
+															data-bs-target="#DetailModal1"
+														>
+															<img src="/icon.detail.svg" alt="icon detail" />
+															<p>Detail</p>
+														</span></td
 													>
 												</tr>
 												<tr>
-													<td>12/12/2022 20:00</td>
-													<td
-														>Jl. Kirai, Cipete Utara, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah
-														Khusus Ibukota Jakarta</td
+													<td>1</td>
+													<td>SRT/123/123/123</td>
+													<td>Nama Urgensi</td>
+													<td>6287982920129</td>
+													<td>Deskripsi</td>
+													<td>Nama File</td>
+													<td style="color: #932121;">Tidak Disetujui </td>
+													<td>
+														<span
+															class="detail-container"
+															data-bs-toggle="modal"
+															data-bs-target="#DetailModal1"
+															><img src="/icon.detail.svg" alt="icon detail" />
+															<p>Detail</p></span
+														></td
 													>
-												</tr>
-												<tr>
-													<td>12/12/2022 20:00</td>
-													<td
-														>Jl. Kirai, Cipete Utara, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah
-														Khusus Ibukota Jakarta</td
+												</tr><tr>
+													<td>1</td>
+													<td>SRT/123/123/123</td>
+													<td>Nama Urgensi</td>
+													<td>6287982920129</td>
+													<td>Deskripsi</td>
+													<td>Nama File</td>
+													<td style="color: #839321;">Pending </td>
+													<td>
+														<span
+															class="detail-container"
+															data-bs-toggle="modal"
+															data-bs-target="#DetailModal1"
+															><img src="/icon.detail.svg" alt="icon detail" />
+															<p>Detail</p></span
+														></td
+													>
+												</tr><tr>
+													<td>1</td>
+													<td>SRT/123/123/123</td>
+													<td>Nama Urgensi</td>
+													<td>6287982920129</td>
+													<td>Deskripsi</td>
+													<td>Nama File</td>
+													<td style="color: #219386;">Disetujui </td>
+													<td>
+														<span
+															class="detail-container"
+															data-bs-toggle="modal"
+															data-bs-target="#DetailModal1"
+															><img src="/icon.detail.svg" alt="icon detail" />
+															<p>Detail</p></span
+														></td
+													>
+												</tr><tr>
+													<td>1</td>
+													<td>SRT/123/123/123</td>
+													<td>Nama Urgensi</td>
+													<td>6287982920129</td>
+													<td>Deskripsi</td>
+													<td>Nama File</td>
+													<td style="color: #219386;">Disetujui </td>
+													<td>
+														<span
+															class="detail-container"
+															data-bs-toggle="modal"
+															data-bs-target="#DetailModal1"
+															><img src="/icon.detail.svg" alt="icon detail" />
+															<p>Detail</p></span
+														></td
+													>
+												</tr><tr>
+													<td>1</td>
+													<td>SRT/123/123/123</td>
+													<td>Nama Urgensi</td>
+													<td>6287982920129</td>
+													<td>Deskripsi</td>
+													<td>Nama File</td>
+													<td style="color: #219386;">Disetujui </td>
+													<td>
+														<span
+															class="detail-container"
+															data-bs-toggle="modal"
+															data-bs-target="#DetailModal1"
+															><img src="/icon.detail.svg" alt="icon detail" />
+															<p>Detail</p></span
+														></td
 													>
 												</tr>
 											</tbody>
@@ -785,8 +879,8 @@
 		/* margin: 0; */
 	}
 	.modal-content {
-		padding: 2rem 1.813rem 1.44rem 2.5rem;
-		margin: 4rem 0 0 -16.5rem;
+		padding: 1.5rem 1.5rem 1.5rem 2.5rem;
+		margin: 3rem 0 0 -11rem;
 		height: 48.563rem;
 		width: 58.12rem;
 	}
@@ -904,6 +998,7 @@
 		border-style: solid;
 		border-color: #404952;
 		padding: 1.25rem 0.625rem;
+		height: 32rem;
 	}
 	.tag-container {
 		color: #fbfdff;
@@ -912,12 +1007,13 @@
 		font-size: 0.875rem;
 	}
 	.outer-tag-container {
-		height: 14.25rem;
+		height: 32rem;
 		background: #282f36;
 		border-width: 1px 0px;
 		border-style: solid;
 		border-color: #404952;
-		overflow: scroll;
+		overflow-x: hidden;
+		overflow-y: scroll;
 	}
 	.inner-contact p {
 		color: #fbfdff;
@@ -943,7 +1039,7 @@
 		border-color: #404952;
 	}
 	.tarea-note {
-		resize: none;
+		width: 790px;
 		margin-bottom: 2.13rem;
 	}
 	.save-button {
