@@ -3,6 +3,7 @@
 	export let series;
 	export let color;
 	export let fillColor;
+	export let enabled;
 	import { onMount } from 'svelte';
 	onMount(async () => {
 		const ApexCharts = (await import('apexcharts')).default;
@@ -26,7 +27,7 @@
 				}
 			},
 			dataLabels: {
-				enabled: false
+				enabled: enabled
 			},
 			stroke: {
 				show: false

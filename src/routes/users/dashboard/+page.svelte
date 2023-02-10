@@ -4,10 +4,12 @@
 	import { onMount } from 'svelte';
 	import { DateInput } from 'date-picker-svelte';
 	import Navbar from '../../../compenents/Navbar.svelte';
+	import Flatpickr from 'svelte-flatpickr';
+	import 'flatpickr/dist/flatpickr.css';
 	import { DatePicker, Space } from 'antd';
 
 	onMount(async () => {
-		new DataTable('#requestlist');
+		new DataTable('#requestlist', { searching: false, paging: true, info: false });
 	});
 </script>
 
@@ -125,49 +127,33 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-body">
-						<!-- <div class="d-flex justify-content-between mb-3">
+						<div class="d-flex justify-content-between mb-3">
 							<h6>Request List</h6>
-							<div class="d-flex">
-								<form action="">
-									<input type="date" name="" id="" />
+							<div class="d-flex ">
+								<form action="" class="date-container">
+									<Flatpickr
+										options={{
+											altInput: true,
+											altFormat: ' F Y',
+											dateFormat: 'Y-m-d'
+										}}
+										id="flatpickr"
+										class="filter-form flatpickr"
+										placeholder="Januari 2023"
+									/>
+									<!-- <input type="date" name="" id="" /> -->
+									<p>To</p>
+									<Flatpickr
+										options={{
+											altInput: true,
+											altFormat: ' F Y',
+											dateFormat: 'Y-m-d'
+										}}
+										id="flatpickr"
+										class="filter-form flatpickr"
+										placeholder="Febuari 2023"
+									/>
 								</form>
-							</div>
-						</div> -->
-						<div class="row">
-							<div class="col-md-8">
-								<h6>Request List</h6>
-							</div>
-							<div class="col-md-2">
-								<div class="d-flex align-items-center">
-									<p class="mt-3">From</p>
-									<!-- <input
-										class="filter-form"
-										type="text"
-										name=""
-										id="datetimepicker9"
-										placeholder="2022"
-									/> -->
-									<div>
-										<DateInput format="yyyy" placeholder="Desember 2022" class="filter-form" />
-									</div>
-								</div>
-								<!-- <DateInput datepickerFormat="yyyy" /> -->
-							</div>
-							<div class="col-md-2">
-								<div class="d-flex align-items-center">
-									<p class="mt-3">To</p>
-									<!-- <input
-										class="filter-form"
-										type="text"
-										name=""
-										id="datetimepicker9"
-										placeholder="2022"
-									/> -->
-									<div>
-										<DateInput format="yyyy" placeholder="Januari 2022" class="filter-form" />
-									</div>
-								</div>
-								<!-- <DateInput datepickerFormat="yyyy" /> -->
 							</div>
 						</div>
 						<table id="requestlist" class="table table-striped mb-5 mt-5" style="width:100%">

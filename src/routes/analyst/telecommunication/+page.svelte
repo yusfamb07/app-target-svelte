@@ -14,7 +14,7 @@
 	onMount(async () => {
 		new DataTable('#lawfulllist');
 		new DataTable('#geolist');
-		new DataTable('#msisdnList');
+		new DataTable('#msisdnList');	
 	});
 
 	// onMount(async () => {
@@ -164,24 +164,28 @@
 				<div class="card" style="height: 470px;">
 					<div class="card-body">
 						<div class="d-flex justify-content-between">
-							<h6>Request Statistics</h6>
-							<Flatpickr
-								options={{
-									altInput: true,
-									altFormat: 'Y',
-									dateFormat: 'Y-m-d'
-									// plugins: [
-									// 	new monthSelectPlugin({
-									// 		shorthand: true, //defaults to false
-									// 		dateFormat: 'm.y', //defaults to "F Y"
-									// 		altFormat: 'F Y', //defaults to "F Y"
-									// 		theme: 'dark' // defaults to "light"
-									// 	})
-									// ]
-								}}
-								id="flatpickr"
-								class="filter-form flatpickr"
-							/>
+							<h6 class="mt-2">Request Statistics</h6>
+							<div class="d-flex align-items-center gap-2">
+								<p class="mt-3 ">Filter</p>
+								<Flatpickr
+									options={{
+										altInput: true,
+										altFormat: 'Y',
+										dateFormat: 'Y-m-d'
+										// plugins: [
+										// 	new monthSelectPlugin({
+										// 		shorthand: true, //defaults to false
+										// 		dateFormat: 'm.y', //defaults to "F Y"
+										// 		altFormat: 'F Y', //defaults to "F Y"
+										// 		theme: 'dark' // defaults to "light"
+										// 	})
+										// ]
+									}}
+									id="flatpickr"
+									class="filter-form flatpickr"
+									placeholder=" 2023"
+								/>
+							</div>
 						</div>
 						<div class="mt-3">
 							<LineChart />

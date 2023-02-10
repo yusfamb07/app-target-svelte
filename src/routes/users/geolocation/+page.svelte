@@ -5,6 +5,8 @@
 	import { onMount } from 'svelte';
 	import MultiSelect from 'svelte-multiselect';
 	import { DateInput } from 'date-picker-svelte';
+	import Flatpickr from 'svelte-flatpickr';
+	import 'flatpickr/dist/flatpickr.css';
 	import Navbar from '../../../compenents/Navbar.svelte';
 
 	const ui_libs = [`Svelte`, `React`, `Vue`, `Angular`, `...`];
@@ -154,18 +156,28 @@
 			<div class="col-md-6">
 				<div class="card" style="height: 470px;">
 					<div class="card-body">
-						<div class="row">
-							<div class="col-md-7">
-								<h6 class="mt-2 mr-2">Request Statistics</h6>
-							</div>
-							<div class="col-md-3">
-								<div class="d-flex align-items-center">
-									<div class="d-flex align-items-center gap-2">
-										<p class="mt-3 ">Filter</p>
-										<DateInput format="yyyy" placeholder="2023" class="filter-form" />
-									</div>
-								</div>
-								<!-- <DateInput datepickerFormat="yyyy" /> -->
+						<div class="d-flex justify-content-between">
+							<h6 class="mt-2">Request Statistics</h6>
+							<div class="d-flex align-items-center gap-2">
+								<p class="mt-3 ">Filter</p>
+								<Flatpickr
+									options={{
+										altInput: true,
+										altFormat: 'Y',
+										dateFormat: 'Y-m-d'
+										// plugins: [
+										// 	new monthSelectPlugin({
+										// 		shorthand: true, //defaults to false
+										// 		dateFormat: 'm.y', //defaults to "F Y"
+										// 		altFormat: 'F Y', //defaults to "F Y"
+										// 		theme: 'dark' // defaults to "light"
+										// 	})
+										// ]
+									}}
+									id="flatpickr"
+									class="filter-form flatpickr"
+									placeholder=" 2023"
+								/>
 							</div>
 						</div>
 						<div class="mt-3">
